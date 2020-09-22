@@ -6,3 +6,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Tabel 1"
+      href: tabel1.html      
+    - text: "Tabel 2"
+      href: tabel2.html      
+      
