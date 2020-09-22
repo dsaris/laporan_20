@@ -1,7 +1,5 @@
 ---
-title: "Tabel 2"
-author: "Aris Warsito"
-date: "22 September 2020"
+title: "Februari 2020"
 output: html_document
 ---
 
