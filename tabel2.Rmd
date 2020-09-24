@@ -5,24 +5,113 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```  
+
+## Report Maret 2020  
+
+
+Halaman ini berisi laporan ajuan dan realisasi sparepart periode maret 2020 
+
+  
+
+```{r include=FALSE}
+library(tidyverse)
+
+ajuan_03 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQyzWENYo8j5mtMAgH04yoJ3ams0FdmeRrk5FikO93jq6g3__7iCm-c5nX9dP2WScA_h2Q_lOEFGOZU/pub?gid=0&single=true&output=csv")
+realisasi_03 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRmL2ZS3_Ai5yg9v55ZPIorZxTtZSuYApa4Ti2ut0i3FfBGb9Hr624WJidDWQalyWPWdGRzXiJtosLj/pub?gid=0&single=true&output=csv")
+
+total_ajuan_03 <- ajuan_03 %>% 
+                      group_by(NAMA.SEKSI.PLANNER) %>%
+                      summarize(jumlah = sum(total, na.rm=TRUE))
+format(total_ajuan_03$jumlah, big.mark=",",scientific=FALSE)                      
+                 
+```  
+  
+```{r, include=FALSE, echo=FALSE}
+library(kableExtra)
+library(knitr)
+
+library(DT)
+```
+  
+Tabel Ajuan dari User  
+  
+
+
+### Daftar Jumlah Realisasi sparepart per unit kerja  
+
+```{r, echo=FALSE}
+realisasi_03$Amount.in.LC <- as.numeric(as.character(realisasi_03$Amount.in.LC))
+
+total_realisasi_03 <- realisasi_03 %>% 
+                      filter(NAMA.SEKSI.PG != "#N/A") %>%
+                      group_by(NAMA.SEKSI.PG) %>%
+                      summarize(jumlah = sum(Amount.in.LC, na.rm=TRUE))
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+  
+```{r, echo=FALSE, layout="l-body-outset"}
+kable(total_realisasi_03, digits = 3, format.args = list(big.mark = ",", 
+  scientific = FALSE)) %>%
+   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = F, position = "left", font_size = 10, fixed_thead = T) %>% 
+  column_spec(2, bold = T, width = "8em", background = "#e8f0fe") %>%
+  row_spec(0, background = "grey", color = "white")
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```  
+![garis](https://ariswa.files.wordpress.com/2020/04/garis.png)  
+    
+### Realisasi sparepart berdasarkan kategori aktivitas  
 
-```{r cars}
-summary(cars)
+```{r, echo=FALSE}
+by_kategori_03 <- realisasi_03 %>% 
+                      
+                      group_by(KATEGORI1) %>%
+                      summarize(jumlah = sum(Amount.in.LC/1000000000, na.rm=TRUE)) 
+                      
+#format(by_kategori_03$jumlah, big.mark=",",scientific=FALSE)                      
+                                            
+g <- ggplot(by_kategori_03, aes(x = reorder(KATEGORI1, -jumlah), y = jumlah)) +
+                  geom_bar(stat = "identity", fill="#c87c2ae6") +
+                  
+                  labs(y= "Jumlah dalam Milyar", x = "Kategori Aktivitas") +
+                  coord_flip()
+g
 ```
+![garis](https://ariswa.files.wordpress.com/2020/04/garis.png)
 
-## Including Plots
+### DAFTAR AJUAN MARET 2020 (versi2)  
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r paging_table, echo=FALSE}
+datatable(total_ajuan_03) %>% formatCurrency('jumlah', currency = "Rp", interval = 3, mark = ",", 
+    digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
 ```
+![garis](https://ariswa.files.wordpress.com/2020/04/garis.png)   
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### REALISASI KUMULATIF
+```{r, echo=FALSE}
+
+cum_realisasi_03 <-  realisasi_03 %>%
+           group_by(DAY) %>%
+            summarise(
+              total_harian = sum(Amount.in.LC/1000000000, na.rm = TRUE)) %>%
+              mutate(kum_real=cumsum(total_harian)) %>%
+              rename('tanggal' = 'DAY')
+            
+cum_realisasi_03$kum_real = as.numeric(as.character(cum_realisasi_03$kum_real))
+
+o <- ggplot(data=cum_realisasi_03,
+    aes(x=tanggal, y=kum_real, color = "red")) +
+  geom_line(size = 1) +
+  xlab("tanggal") +
+  ylab("Rupiah") +
+  ggtitle("Realisasi Sparepart Kumulatif Maret 2020") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 30), labels = scales::comma)+
+  scale_x_discrete(name = "Tanggal", limits = c(1:31))
+  #theme(legend.position = c(0.25, 0.9),
+        #legend.direction = "horizontal")
+o
+
+```
+**END**
+

@@ -8,11 +8,27 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Ajuan sparepart activity plan bulanan dari Unit kerja
+## Tabel Realisasi Material Berdasarkan Jenis Aktivitas
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r include=FALSE}
+library(kableExtra)
+library(knitr)
+library(tidyverse)
+library(stringr)
+library(DT)
+library(lubridate)
+library(scales)
+
+ajuan_mso <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vT5NOKrXq2ABEnoW8c9pX4lKRA_rB1nNkbhOa934mXIB6OFwO9_9g6bBnw848nO3vqPiXnRskpV2osy/pub?gid=0&single=true&output=csv""
+)
+
+
+
+```
+
+
+
 
 ```{r cars}
 summary(cars)

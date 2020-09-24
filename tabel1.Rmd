@@ -1,5 +1,5 @@
 ---
-title: "Januari 2020"
+title: "September 2020"
 output: html_document
 ---
 
@@ -7,14 +7,25 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+```{r include=FALSE}
+library(kableExtra)
+library(knitr)
+library(tidyverse)
+library(stringr)
+library(DT)
+library(lubridate)
+library(scales)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+kumulatif_sep_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQUYsfUgVYlVMpSWUj0U20y7GjAFgdPdNQhMxry-_31ekA_9i1KIlNHoiDgI0H0N1ady3g2SGQUICBU/pub?gid=1958899369&single=true&output=csv"
+)
+kumulatif_sep_20$average.target <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$average.target))
+kumulatif_sep_20$kumulatif.target <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$kumulatif.target))
+kumulatif_sep_20$realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$realisasi))
+kumulatif_sep_20$kumulatif.realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$kumulatif.realisasi))
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+                
+
 ```
 
 ## Including Plots

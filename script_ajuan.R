@@ -27,11 +27,97 @@ str(total_ajuan)
 
 datatable(total_ajuan)
 
-  
-  
-  
-  
-  
+
+# Tabel kumulatif september
+kumulatif_sep_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQUYsfUgVYlVMpSWUj0U20y7GjAFgdPdNQhMxry-_31ekA_9i1KIlNHoiDgI0H0N1ady3g2SGQUICBU/pub?gid=1958899369&single=true&output=csv"
+)
+#kumulatif_sep_20$kumulatif.target <- gsub("Rp", "", kumulatif_sep_20$kumulatif.target)
+
+kumulatif_sep_20$average.target <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$average.target))
+kumulatif_sep_20$kumulatif.target <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$kumulatif.target))
+kumulatif_sep_20$realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$realisasi))
+kumulatif_sep_20$kumulatif.realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_sep_20$kumulatif.realisasi))
+
+
+
+#Plot kumulatif
+grafik_kum_sep20 <- kumulatif_sep_20 %>%
+  filter(kumulatif.realisasi != "NA")
+
+
+
+
+o <- ggplot(data=grafik_kum_sep20,
+            aes(x=tanggal, y=date, color = "red")) +
+  geom_line(size = 1) +
+  xlab("tanggal") +
+  ylab("Rupiah") +
+  ggtitle("Realisasi Sparepart Kumulatif September 2020") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 30), labels = scales::comma)+
+  scale_x_discrete(name = "Tanggal", limits = c(1:31))
+#theme(legend.position = c(0.25, 0.9),
+#legend.direction = "horizontal")
+
+###CONTOH GRAFIK LINE  
+real_1910 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTXftGEbiYGbiKKkaeFwB71A56xeRtXWUauTTzrLS09CZeFByCVzkRtxhY_-wknV6vJWLseqiPx5gSp/pub?gid=0&single=true&output=csv")
+str(real_1910)
+real_1910$NOM_material = as.numeric(as.character(real_1910$NOM_material))
+#Grouping dan summary per tanggal
+by_day <-  real_1910 %>%
+  group_by(DAY) %>%
+  summarise(
+    total_harian = sum(NOM_material, na.rm = TRUE)) %>%
+  mutate(kum_real=cumsum(total_harian)) %>%
+  rename('tanggal' = 'DAY')
+
+
+by_day$kum_real = as.numeric(as.character(by_day$kum_real))
+View(by_day)
+str(by_day)
+
+tabel1 <- tibble(
+  tanggal = 1:31, 
+  target = 5000000000/31 
+)
+
+tabel1_cum <- tabel1 %>% mutate(kum_target=cumsum(target))
+View(tabel1_cum)
+str(tabel1_cum)
+gabung1 <- left_join(tabel1_cum, by_day, by = 'tanggal') 
+#gabung1$kum_real = as.numeric(as.character(gabung1$kum_real))
+View(gabung1)
+ggplot() + 
+  geom_line(data = gabung1, aes(x = tanggal, y = kum_target), color = "green", size = 1) +
+  geom_line(data = gabung1, aes(x = tanggal, y = kum_real), color = "red", size = 1) +
+  xlab('Tanggal') +
+  ylab('Jumlah') +
+  ggtitle("Realisasi Material Oktober 2019") +
+  scale_y_continuous(name = "Rupiah", limits = c(0, 6000000000), labels = scales::comma)+
+  scale_x_discrete(name = "Tanggal", limits = c(1:31))+ 
+  theme(legend.position = "top")
+
+#ubah kolom name dan jadikan 1 variabel 
+gabung2 <- rename(gabung1, 'rencana' = 'kum_target',
+                  'realisasi' = 'kum_real') %>%
+  select(c(1,3,5)) %>%
+  gather ('rencana','realisasi', key = "Kategori", value = "jumlah")
+gabung2$tanggal = as.numeric(as.character(gabung2$tanggal))
+gabung2$kategori = as.numeric(as.character(gabung2$kategori))
+str(gabung2)  
+
+
+#Gambar grafik2
+ggplot(data=gabung2,
+       aes(x=tanggal, y=jumlah, colour=Kategori)) +
+  geom_line(size = 1) +
+  xlab("tanggal") +
+  ylab("Rupiah") +
+  ggtitle("Realisasi Material Oktober 2019") +
+  scale_y_continuous(name = "Rupiah", limits = c(0, 6000000000), labels = scales::comma)+
+  scale_x_discrete(name = "Tanggal", limits = c(1:31))+
+  theme(legend.position = c(0.25, 0.9),
+        legend.direction = "horizontal")
+
   
 
 
