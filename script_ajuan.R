@@ -40,6 +40,11 @@ kumulatif_sep_20$kumulatif.realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_se
 
 
 
+#mengubah format tanggal
+kumulatif_sep_20 <- kumulatif_sep_20 %>% mutate(tanggal2 =as.Date(tanggal, format= '%d/%m/%y'))
+
+str(kumulatif_sep_20)
+
 #Plot kumulatif
 grafik_kum_sep20 <- kumulatif_sep_20 %>%
   filter(kumulatif.realisasi != "NA")
@@ -47,13 +52,16 @@ grafik_kum_sep20 <- kumulatif_sep_20 %>%
 
 
 
-o <- ggplot(data=grafik_kum_sep20,
-            aes(x=tanggal, y=date, color = "red")) +
-  geom_line(size = 1) +
+o <- ggplot(data=kumulatif_sep_20,
+            aes(x=tanggal2)) +
+  geom_line(aes(y = kumulatif.target), color = "darkred", size = 1) +
+  geom_line(aes(y = kumulatif.realisasi), color = "steelblue", size = 1) +
+  
   xlab("tanggal") +
   ylab("Rupiah") +
   ggtitle("Realisasi Sparepart Kumulatif September 2020") +
-  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 30), labels = scales::comma)+
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 5000000000), labels = scales::comma)+
+  
   scale_x_discrete(name = "Tanggal", limits = c(1:31))
 #theme(legend.position = c(0.25, 0.9),
 #legend.direction = "horizontal")
