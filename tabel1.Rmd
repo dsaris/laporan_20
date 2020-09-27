@@ -56,3 +56,35 @@ ggplot(data=kumulatif_sep_20,
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r top_10_spare, echo=FALSE}
+rl_sep_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQUYsfUgVYlVMpSWUj0U20y7GjAFgdPdNQhMxry-_31ekA_9i1KIlNHoiDgI0H0N1ady3g2SGQUICBU/pub?gid=0&single=true&output=csv")
+
+rl_sep_20$Quantity <- as.numeric(rl_sep_20$Quantity)
+rl_sep_20$Amount.in.LC <- as.numeric(rl_sep_20$Amount.in.LC)
+
+
+top_spare <- rl_sep_20 %>%
+  group_by(Material,Description, Base.Unit) %>%
+  summary(
+    Qty = sum(Quantity, na.rm = TRUE),
+    Amount = sum(Amount.in.LC)
+  )
+
+top_spare[1:10]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
