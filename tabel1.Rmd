@@ -118,7 +118,11 @@ list_mat_uk <- rl_sep_20 %>%
   summarize(
     Amount = sum(Amount.in.LC, na.rm = TRUE)
   ) %>%
-  arrange(desc(Amount)) 
+  arrange(desc(Amount)) %>%
+  rename(Unit_Kerja = CORRECTED.DESC.CC.PG,
+         FUNLOC = Functional.loc.,
+         Order_desc = DESKRIPSI.KEGIATAN,
+         Unit = Base.Unit)
  
 datatable(list_mat_uk) %>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
 ```
