@@ -90,11 +90,7 @@ datatable(top_spare) %>% formatCurrency('Amount', currency = "Rp", interval = 3,
 $~$
 $~$
   
-  
-  
-    
-  
-  
+
     
 ## Top 10 Unit Kerja
 
@@ -110,7 +106,22 @@ top_uk <- rl_sep_20 %>%
  
 datatable(top_uk) %>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
 ```
+$~$
+$~$
 
+## List Material per Unit Kerja
+```{r list_mat_perUK, echo=FALSE}
+
+
+list_mat_uk <- rl_sep_20 %>%
+  group_by(CORRECTED.DESC.CC.PG, Order, Functional.loc., DESKRIPSI.KEGIATAN,  Material,Description, Base.Unit) %>%
+  summarize(
+    Amount = sum(Amount.in.LC, na.rm = TRUE)
+  ) %>%
+  arrange(desc(Amount)) 
+ 
+datatable(list_mat_uk) %>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
+```
 
 
 
