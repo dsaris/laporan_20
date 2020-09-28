@@ -116,6 +116,7 @@ $~$
 list_mat_uk <- rl_sep_20 %>%
   group_by(CORRECTED.DESC.CC.PG, Order, Functional.loc., DESKRIPSI.KEGIATAN,  Material,Description, Base.Unit) %>%
   summarize(
+    Qty = sum(Quantity, na.rm = TRUE),
     Amount = sum(Amount.in.LC, na.rm = TRUE)
   ) %>%
   arrange(desc(Amount)) %>%
