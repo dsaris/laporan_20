@@ -60,7 +60,8 @@ ggplot(data=kumulatif_sep_20,
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-  
+$~$
+$~$  
     
     
  
@@ -84,7 +85,12 @@ top_spare <- rl_sep_20 %>%
   top_n(10)
 datatable(top_spare) %>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
 ```
-
+  
+  
+$~$
+$~$
+  
+  
   
     
   
