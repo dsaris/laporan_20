@@ -38,11 +38,11 @@ kumulatif_sep_20 %>% replace(., is.na(.), "")
 
 ```
 
-## Target dan Realisasi Kumulatif September 2020
+## Target dan Realisasi Kumulatif
 
 
 
-```{r graf_line, echo=FALSE}
+```{r graf_line, echo=FALSE, warning=FALSE}
 ggplot(data=kumulatif_sep_20,
             aes(x=tanggal2)) +
   geom_line(aes(y = kumulatif.target), color = "darkred", size = 1) +
