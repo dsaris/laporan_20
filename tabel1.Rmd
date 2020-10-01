@@ -45,8 +45,8 @@ kumulatif_sep_20 %>% replace(., is.na(.), "")
 ```{r graf_line, echo=FALSE, warning=FALSE}
 ggplot(data=kumulatif_sep_20,
             aes(x=tanggal2)) +
-  geom_line(aes(y = kumulatif.target), color = "darkred", size = 1) +
-  geom_line(aes(y = kumulatif.realisasi), color = "steelblue", size = 1) +
+  geom_line(aes(y = kumulatif.target), color = "darkred", size = 1, alpha=0.3) +
+  geom_line(aes(y = kumulatif.realisasi), color = "steelblue", size = 1, alpha=0.3) +
   geom_point(aes(y = kumulatif.realisasi), color = "steelblue", size=2, alpha=0.8) +
   geom_point(aes(y = kumulatif.target), color = "red", size=2, alpha=0.8) +
   xlab("tanggal") +
