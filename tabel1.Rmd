@@ -19,6 +19,10 @@ library(stringr)
 library(DT)
 library(lubridate)
 library(scales)
+library(tidyr)
+library(tidyr)
+library(plotly)
+library(ggplot2)
 
 kumulatif_sep_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQUYsfUgVYlVMpSWUj0U20y7GjAFgdPdNQhMxry-_31ekA_9i1KIlNHoiDgI0H0N1ady3g2SGQUICBU/pub?gid=1958899369&single=true&output=csv"
 )
@@ -132,13 +136,41 @@ datatable(list_mat_uk, extensions = 'Buttons',
                                              c(10,25,50,"All")))) #%>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
 ```
 
+$~$
+
+## SUMMARY AJUAN, TARGET, DAN REALISASI 
 
 
+```{r summary_perUK, echo=FALSE}
 
+db_sep <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRluAGgaJnIMXTovQBTozWFZYeVroT8cgZwmH6DdmiGBJ3bKbR_82Y0zJgimGh-HqOIpZVP7x3OgIGU/pub?gid=0&single=true&output=csv")
 
+db_sep$TOTAL.BIAYA <- as.numeric(as.character(db_sep$TOTAL.BIAYA))
+db_sep$TARGET.AJUAN <- as.numeric(as.character(db_sep$TARGET.AJUAN))
+db_sep$Realisasi <- as.numeric(as.character(db_sep$Realisasi))
 
+db_sep <- db_sep %>% mutate(Ajuan = TOTAL.BIAYA,
+                            Target = TARGET.AJUAN,
+                            REALISASI = Realisasi)
 
+db_09_20<-gather(db_sep, kategori, jumlah, Ajuan:REALISASI)
 
+bar_db_09_20 <- db_09_20 %>% group_by(kategori) %>%
+                summarize( tot = sum(jumlah, na.rm = TRUE)) 
+
+p<-ggplot(bar_db_09_20, aes(x=kategori, y=tot, fill=kategori)) +
+  geom_bar(stat="identity")+theme_minimal() +
+
+xlab("Kategori") +
+  ylab("Rupiah") +
+  ggtitle("SUMMARY BIAYA MATERIAL SEPTEMBER") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 12000000000), labels = scales::comma) +
+  geom_text(aes(label=(tot/1000000000)), position=position_dodge(width=0.9), vjust=-0.25)
+   
+
+p
+
+```
 
 
 
