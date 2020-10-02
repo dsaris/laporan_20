@@ -170,6 +170,7 @@ xlab("Kategori") +
 
 p
 
+
 ```
 
 
