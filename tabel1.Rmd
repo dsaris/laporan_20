@@ -172,7 +172,31 @@ p
 
 
 ```
+$~$
+$~$
 
 
 
+## Ajuan Sparepart Per UK
+
+```{r ajuan_perUK, echo=FALSE}
+aj_db_sep <- db_sep %>% 
+  filter(PLANT == 9) %>%
+  select(NAMA.SEKSI.PLANNER, EQUIP, RENCANA.KEGIATAN, STOCK.NO., NAMA.MATERIAL...JASA, SAT, QTY, TOTAL.BIAYA ) %>%
+  rename(Nama_UK = NAMA.SEKSI.PLANNER,
+         Kegiatan = RENCANA.KEGIATAN,
+         No.Stock = STOCK.NO.,
+         Matl.Descriptions = NAMA.MATERIAL...JASA,
+         Total = TOTAL.BIAYA)
+  
+
+datatable(aj_db_sep, extensions = 'Buttons',
+            options = list(dom = 'Blfrtip',
+                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                           lengthMenu = list(c(10,25,50,-1),
+                                             c(10,25,50,"All"))))
+
+
+
+```
 

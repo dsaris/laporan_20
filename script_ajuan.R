@@ -115,7 +115,10 @@ str(gabung2)
 
 
 #Gambar grafik2
-ggplot(data=gabung2,
+library(ggplot2)
+library(plotly)
+
+d <- ggplot(data=gabung2,
        aes(x=tanggal, y=jumlah, colour=Kategori)) +
   geom_line(size = 1) +
   xlab("tanggal") +
@@ -126,8 +129,29 @@ ggplot(data=gabung2,
   theme(legend.position = c(0.25, 0.9),
         legend.direction = "horizontal")
 
-  
 
+# Barchart
+db_sep <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRluAGgaJnIMXTovQBTozWFZYeVroT8cgZwmH6DdmiGBJ3bKbR_82Y0zJgimGh-HqOIpZVP7x3OgIGU/pub?gid=0&single=true&output=csv")
+
+db_sep$TOTAL.BIAYA <- as.numeric(as.character(db_sep$TOTAL.BIAYA))
+db_sep$TARGET.AJUAN <- as.numeric(as.character(db_sep$TARGET.AJUAN))
+db_sep$Realisasi <- as.numeric(as.character(db_sep$Realisasi))
+
+
+db_09_20<-gather(db_sep, kategori, jumlah, TOTAL.BIAYA:Realisasi)
+
+bar_db_09_20 <- db_09_20 %>% group_by(kategori) %>%
+  summarize( tot = sum(jumlah, na.rm = TRUE)) 
+
+p<-ggplot(bar_db_09_20, aes(x=kategori, y=tot, fill=kategori)) +
+  geom_bar(stat="identity")+theme_minimal() +
+  
+  xlab("Kategori") +
+  ylab("Rupiah") +
+  ggtitle("SUMMARY BIAYA MATERIAL SEPTEMBER") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 12000000000), labels = scales::comma)
+
+ggplotly(p)
 
 
 
