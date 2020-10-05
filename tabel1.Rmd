@@ -43,7 +43,7 @@ kumulatif_sep_20 %>% replace(., is.na(.), "")
 ```
 
 ## Target dan Realisasi Kumulatif
-
+Berikut adalah  summary antara target dan realisasi pemakaian sparepart secara kumulatif.
 
 
 ```{r graf_line, echo=FALSE, warning=FALSE}
@@ -69,7 +69,8 @@ $~$
     
     
  
-## Top 10 Material Used
+## Top 10 Material Used  
+Berikut adalah daftar biaya material per sparepart.
 
 ```{r top_10_spare, echo=FALSE}
 library(dplyr)
@@ -96,7 +97,8 @@ $~$
   
 
     
-## Top 10 Unit Kerja
+## Top 10 Unit Kerja  
+Berikut adalah total biaya pemakaian sparepart per Unit kerja September 2020.
 
 ```{r top_10_uk, echo=FALSE}
 
@@ -113,7 +115,8 @@ datatable(top_uk) %>% formatCurrency('Amount', currency = "Rp", interval = 3, ma
 $~$
 $~$
 
-## List Material per Unit Kerja
+## List Material per Unit Kerja  
+Berikut adalah daftar realisasi sparepart dari tiap unit kerja.
 ```{r list_mat_perUK, echo=FALSE}
 
 
@@ -139,6 +142,7 @@ datatable(list_mat_uk, extensions = 'Buttons',
 $~$
 
 ## SUMMARY AJUAN, TARGET, DAN REALISASI 
+Berikut adalah summary dari daftar ajuan, Target dan realisasi material.
 
 
 ```{r summary_perUK, echo=FALSE}
@@ -177,7 +181,8 @@ $~$
 
 
 
-## Ajuan Sparepart Per UK
+## Ajuan Sparepart Per UK  
+Berikut ini adalah daftar sparepart september 2020 yang diajukan oleh Tiap unit kerja 
 
 ```{r ajuan_perUK, echo=FALSE}
 aj_db_sep <- db_sep %>% 
