@@ -204,4 +204,55 @@ datatable(aj_db_sep, extensions = 'Buttons',
 
 
 ```
+$~$
+$~$
 
+
+## Pengendalian September
+
+```{r pngd, echo=FALSE}
+
+
+pngd_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQX9qk5moha5zWUNA1D0xtHRm2x41u1jsl3DxloLAwuZ0lXXGcjf-wcI7PXUSx0YcXIJDXVZsRgEXNR/pub?gid=0&single=true&output=csv")
+
+pngd_20$TARGET.OVH <-  as.numeric(gsub("[Rp.]","", pngd_20$TARGET.OVH))
+pngd_20$TARGET.OPERASIONAL <-  as.numeric(gsub("[Rp.]","", pngd_20$TARGET.OPERASIONAL))
+pngd_20$REALISASI.OVH <-  as.numeric(gsub("[Rp.]","", pngd_20$REALISASI.OVH))
+pngd_20$REALISASI.OPERASIONAL <-  as.numeric(gsub("[Rp.]","", pngd_20$REALISASI.OPERASIONAL))
+pngd_20$AMOUNT.TARGET <-  as.numeric(gsub("[Rp.]","", pngd_20$AMOUNT.TARGET))
+pngd_20$JUMLAH.AJUAN <-  as.numeric(gsub("[Rp.]","", pngd_20$JUMLAH.AJUAN))
+pngd_20$REALISASI <-  as.numeric(gsub("[Rp.]","", pngd_20$REALISASI))
+pngd_20$TARGET.OPERASIONAL <- format(pngd_20$TARGET.OPERASIONAL, scientific=FALSE)
+
+pngd_20_09 <- pngd_20 %>% 
+  filter(BULAN == 9)
+  
+  
+  
+ops_20_09 <- pngd_20_09 %>%
+  select(TARGET.OPERASIONAL, REALISASI.OPERASIONAL)
+
+
+
+
+ops_20_09 <-   gather(ops_20_09, operasional, jumlah, TARGET.OPERASIONAL:REALISASI.OPERASIONAL)
+
+ops_20_09$jumlah <- as.numeric(ops_20_09$jumlah)
+bar_ops_20_09 <- ops_20_09 %>% group_by(operasional) %>%
+                summarize( tot2 = sum(jumlah, na.rm = TRUE)/1000000000) 
+
+q<-ggplot(bar_ops_20_09, aes(x=operasional, y=tot2, fill=operasional)) +
+  geom_bar(stat="identity")+theme_minimal() +
+
+xlab("Kategori") +
+  ylab("Rupiah") +
+  ggtitle("SUMMARY BIAYA MATERIAL SEPTEMBER") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 7), labels = scales::comma) +
+  geom_text(aes(label=(tot2)), position=position_dodge(width=0.9), vjust=-0.25)
+   
+
+q
+
+
+
+```
