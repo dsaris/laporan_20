@@ -155,6 +155,21 @@ ggplotly(p)
 
 
 
+#alternatif geomline
+View(kumulatif_sep_20)
+kumulatif_sep_20 <- select(kumulatif_sep_20, tanggal2, kumulatif.target, kumulatif.realisasi)
+
+
+akumulatif_sep_20 <- gather(kumulatif_sep_20, "KATEGORI", "TOTAL", kumulatif.target:kumulatif.realisasi)
+
+
+ggplot(akumulatif_sep_20, aes(x=tanggal2, y=TOTAL, color=KATEGORI)) +
+  geom_line(aes(y = TOTAL), size = 1, alpha=0.8)+
+  geom_point(aes(y = TOTAL), size = 2, alpha=1)+
+  scale_color_manual(values=c("#ff6550", "#15D7F9"))
+  
+
+
 
 
 

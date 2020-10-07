@@ -244,15 +244,18 @@ ops_20_09 <-   gather(ops_20_09, operasional, jumlah, TARGET.OPERASIONAL:REALISA
 ops_20_09$jumlah <- as.numeric(ops_20_09$jumlah)
 bar_ops_20_09 <- ops_20_09 %>% group_by(operasional) %>%
                 summarize( tot2 = sum(jumlah, na.rm = TRUE)/1000000000) 
+#bar_ops_20_09 <- round(bar_ops_20_09$tot2, digits = 2)
 
 q<-ggplot(bar_ops_20_09, aes(x=operasional, y=tot2, fill=operasional)) +
   geom_bar(stat="identity")+theme_minimal() +
-
-xlab("Kategori") +
+  theme(legend.position="none")+
+  xlab("Kategori") +
   ylab("Rupiah") +
   ggtitle("SUMMARY BIAYA MATERIAL SEPTEMBER") +
   scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 7), labels = scales::comma) +
-  geom_text(aes(label=(tot2)), position=position_dodge(width=0.9), vjust=-0.25)
+  geom_text(aes(label=round(tot2,3)), position=position_dodge(width=0.9), vjust=1.5, color="white") +
+  scale_fill_manual(values=c("#a51204db","#47494eb8")) +
+  scale_x_discrete(limits=c("TARGET.OPERASIONAL", "REALISASI.OPERASIONAL"), labels = c("Target","Realisasi"))
    
 
 q
