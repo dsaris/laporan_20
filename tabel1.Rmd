@@ -164,17 +164,20 @@ db_sep <- db_sep %>% mutate(Ajuan = TOTAL.BIAYA,
 db_09_20<-gather(db_sep, kategori, jumlah, Ajuan:REALISASI)
 
 bar_db_09_20 <- db_09_20 %>% group_by(kategori) %>%
-                summarize( tot = sum(jumlah, na.rm = TRUE)) 
+                summarize( tot = sum(jumlah, na.rm = TRUE)/1000000000) 
 
 p<-ggplot(bar_db_09_20, aes(x=kategori, y=tot, fill=kategori)) +
   geom_bar(stat="identity")+theme_minimal() +
-
-xlab("Kategori") +
+  
+  xlab("Kategori") +
   ylab("Rupiah") +
   ggtitle("SUMMARY BIAYA MATERIAL SEPTEMBER") +
-  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 12000000000), labels = scales::comma) +
-  geom_text(aes(label=(tot/1000000000)), position=position_dodge(width=0.9), vjust=-0.25)
-   
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 12), labels = scales::comma) +
+  geom_text(aes(label=round(tot,3)), position=position_dodge(width=0.9), vjust=1.6) +
+  scale_x_discrete(limits=c("Ajuan", "Target", "REALISASI"))+
+  scale_fill_manual(values=c("#4285f4d6","#a51204db","#47494eb8"))
+  
+    
 
 p
 
@@ -213,6 +216,7 @@ $~$
 
 
 ## Pengendalian September
+### Target dan realisasi sparepart Operasional
 
 ```{r pngd, echo=FALSE}
 
