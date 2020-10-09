@@ -60,7 +60,7 @@ ggplot(akumulatif_sep_20, aes(x=tanggal2, y=TOTAL, color=KATEGORI)) +
   xlab("tanggal") +
   ylab("Rupiah") +
   ggtitle("Realisasi Sparepart Kumulatif September 2020") +
-  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 7000000000), labels = scales::comma)
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 9000000000), labels = scales::comma)
   
   #scale_x_discrete(name = "Tanggal", limits = c(1:31))
 #theme(legend.position = c(0.25, 0.9),
@@ -256,7 +256,7 @@ q<-ggplot(bar_ops_20_09, aes(x=operasional, y=tot2, fill=operasional)) +
   xlab("Kategori") +
   ylab("Rupiah") +
   ggtitle("SUMMARY BIAYA MATERIAL SEPTEMBER") +
-  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 7), labels = scales::comma) +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 9), labels = scales::comma) +
   geom_text(aes(label=round(tot2,3)), position=position_dodge(width=0.9), vjust=1.5, color="white") +
   scale_fill_manual(values=c("#a51204db","#47494eb8")) +
   scale_x_discrete(limits=c("TARGET.OPERASIONAL", "REALISASI.OPERASIONAL"), labels = c("Target","Realisasi"))
