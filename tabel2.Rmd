@@ -215,7 +215,7 @@ $~$
 $~$
 
 
-## Pengendalian September
+## Pengendalian Oktober
 ### Target dan realisasi sparepart Operasional
 
 ```{r pngd, echo=FALSE}
