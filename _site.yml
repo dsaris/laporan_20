@@ -10,4 +10,5 @@ navbar:
       href: tabel1.html      
     - text: "Oktober"
       href: tabel2.html      
- 
+    - text: "Nopember"
+      href: nop_20.html  
