@@ -193,7 +193,7 @@ Berikut ini adalah daftar sparepart september 2020 yang diajukan oleh Tiap unit 
 
 ```{r ajuan_perUK, echo=FALSE}
 aj_db_okt <- db_okt %>% 
-  filter(PLANT == 10) %>%
+  filter(PLANT == 11) %>%
   select(NAMA.SEKSI.PLANNER, EQUIP, RENCANA.KEGIATAN, STOCK.NO., NAMA.MATERIAL...JASA, SAT, QTY, TOTAL.BIAYA ) %>%
   rename(Nama_UK = NAMA.SEKSI.PLANNER,
          Kegiatan = RENCANA.KEGIATAN,
