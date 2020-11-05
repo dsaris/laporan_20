@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Aris Warsito" />
+
+
+<title>all-2020</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.13/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<script src="site_libs/jszip-1.10.20/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.10.20/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.10.20/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.20/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.20/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">PEP ONLINE</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="tabel1.html">September</a>
+</li>
+<li>
+  <a href="tabel2.html">Oktober</a>
+</li>
+<li>
+  <a href="nop_20.html">Nopember</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">all-2020</h1>
+<h4 class="author">Aris Warsito</h4>
+<h4 class="date">4 November 2020</h4>
+
+</div>
+
+
+<div id="tabel-realisasi-material-berdasarkan-jenis-aktivitas" class="section level2">
+<h2>Tabel Realisasi Material Berdasarkan Jenis Aktivitas</h2>
+<div id="htmlwidget-36b0619881f6b024793f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-36b0619881f6b024793f">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Operasional","Overhoule Kiln 1","Overhoule Kiln 2","Overhoule Kiln 3","Overhoule Kiln 4","Overhoule Mill 1","Overhoule Mill 2","Overhoule Mill 3","Overhoule Mill 4","Overhoule Mill 5","Overhoule Mill 6","Overhoule Mill 7","Overhoule Mill 8","Overhoule Mill 9","Patchjob"],["8,138,335,657","98,837,823","250,701,251","565,504,752","12,045,273,918","0","18,668,520","0","0","0","0","1,587,742,549","4,706,400","984,419,050","3,941,000"],["7,692,701,686","51,270,385","0","4,283,807,142","21,031,425,681","427,147,035","0","0","0","34,247,900","407,916,630","13,645,308","1,260,794,516","565,279,888","0"],["6,996,417,522","877,841,880","0","12,818,417,597","25,079,943","1,296,499,267","250,230,436","0","0","67,250,400","1,372,218,390","36,108,800","158,726,827","0","184,340,000"],["2,684,498,118","150,617,562","1,600,000","19,398,955,691","60,680,000","32,693,472","0","17,601,490","13,441,435","11,820,000","0","188,297,505","34,805,178","4,164,368","169,809,716"],["3,373,320,393","158,964,471","845,214,222","4,544,749","20,375,000","0","0","0","762,262","1,973,897","0","0","0","0","0"],["4,879,199,762","1,379,384,482","7,217,767,005","97,755,500","0","0","0","0","519,810,250","923,414,354","0","0","0","0","0"],["5,644,408,010","28,819,270,993","7,965,912,709","576,000","0","1,687,143","7,312,500","0","4,711,556,475","165,644,003","14,205,757","0","0","0","0"],["6,700,348,586","150,882,620","4,164,065","0","0","10,582,724","1,326,828,651","0","0","24,000","0","0","0","30,006,000","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["61,671,261,717","31,693,664,516","16,285,942,902","37,169,561,431","33,377,980,553","1,768,609,641","1,603,040,107","17,601,490","5,245,825,422","1,344,250,841","1,794,340,777","1,825,794,162","1,459,032,921","1,585,004,806","656,199,236"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>kategori_ovh<\/th>\n      <th>Jan<\/th>\n      <th>Feb<\/th>\n      <th>Mar<\/th>\n      <th>Apr<\/th>\n      <th>Mei<\/th>\n      <th>Jun<\/th>\n      <th>Jul<\/th>\n      <th>Agt<\/th>\n      <th>Sep<\/th>\n      <th>Okt<\/th>\n      <th>Nop<\/th>\n      <th>Des<\/th>\n      <th>jumlah<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-cb383c107cae18fc5b2c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cb383c107cae18fc5b2c">{"x":{"filter":"none","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Operasional","Overhoule Kiln 1","Overhoule Kiln 2","Overhoule Kiln 3","Overhoule Kiln 4","Overhoule Mill 1","Overhoule Mill 2","Overhoule Mill 3","Overhoule Mill 4","Overhoule Mill 5","Overhoule Mill 6","Overhoule Mill 7","Overhoule Mill 8","Overhoule Mill 9","Patchjob"],["8,138,335,657","98,837,823","250,701,251","565,504,752","12,045,273,918","0","18,668,520","0","0","0","0","1,587,742,549","4,706,400","984,419,050","3,941,000"],["7,692,701,686","51,270,385","0","4,283,807,142","21,031,425,681","427,147,035","0","0","0","34,247,900","407,916,630","13,645,308","1,260,794,516","565,279,888","0"],["6,996,417,522","877,841,880","0","12,818,417,597","25,079,943","1,296,499,267","250,230,436","0","0","67,250,400","1,372,218,390","36,108,800","158,726,827","0","184,340,000"],["2,684,498,118","150,617,562","1,600,000","19,398,955,691","60,680,000","32,693,472","0","17,601,490","13,441,435","11,820,000","0","188,297,505","34,805,178","4,164,368","169,809,716"],["3,373,320,393","158,964,471","845,214,222","4,544,749","20,375,000","0","0","0","762,262","1,973,897","0","0","0","0","0"],["4,879,199,762","1,379,384,482","7,217,767,005","97,755,500","0","0","0","0","519,810,250","923,414,354","0","0","0","0","0"],["5,644,408,010","28,819,270,993","7,965,912,709","576,000","0","1,687,143","7,312,500","0","4,711,556,475","165,644,003","14,205,757","0","0","0","0"],["6,700,348,586","150,882,620","4,164,065","0","0","10,582,724","1,326,828,651","0","0","24,000","0","0","0","30,006,000","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["61,671,261,717","31,693,664,516","16,285,942,902","37,169,561,431","33,377,980,553","1,768,609,641","1,603,040,107","17,601,490","5,245,825,422","1,344,250,841","1,794,340,777","1,825,794,162","1,459,032,921","1,585,004,806","656,199,236"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>kategori_ovh<\/th>\n      <th>Jan<\/th>\n      <th>Feb<\/th>\n      <th>Mar<\/th>\n      <th>Apr<\/th>\n      <th>Mei<\/th>\n      <th>Jun<\/th>\n      <th>Jul<\/th>\n      <th>Agt<\/th>\n      <th>Sep<\/th>\n      <th>Okt<\/th>\n      <th>Nop<\/th>\n      <th>Des<\/th>\n      <th>jumlah<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Blfrtip","buttons":["copy","csv","excel","pdf","print"],"lengthMenu":[[5,10,20,-1],["5","10","20","All"]],"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
