@@ -12,3 +12,5 @@ navbar:
       href: tabel2.html      
     - text: "Nopember"
       href: nop_20.html  
+    - text: "Desember"
+      href: des_20.html  

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Desember 2020</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.16/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<script src="site_libs/jszip-1.10.20/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.10.20/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.10.20/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.20/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.20/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">PEP ONLINE</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="tabel1.html">September</a>
+</li>
+<li>
+  <a href="tabel2.html">Oktober</a>
+</li>
+<li>
+  <a href="nop_20.html">Nopember</a>
+</li>
+<li>
+  <a href="des_20.html">Desember</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Desember 2020</h1>
+
+</div>
+
+
+<div id="target-dan-realisasi-kumulatif" class="section level2">
+<h2>Target dan Realisasi Kumulatif</h2>
+<p>Berikut adalah summary antara target dan realisasi pemakaian sparepart secara kumulatif.</p>
+<p><img src="des_20_files/figure-html/graf_line-1.png" width="672" /></p>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+</div>
+<div id="top-10-material-used" class="section level2">
+<h2>Top 10 Material Used</h2>
+<p>Berikut adalah daftar biaya material per sparepart.</p>
+<pre><code>## `summarise()` regrouping output by &#39;Material&#39;, &#39;Description&#39; (override with `.groups` argument)</code></pre>
+<pre><code>## Selecting by Amount</code></pre>
+<div id="htmlwidget-8409bed70ce460b2b7ae" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8409bed70ce460b2b7ae">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200","201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220","221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240","241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269"],["632-200221","331-200667","323-200646","317-200625","301-200636","350-200716","118-200079","316-201129","626-203385","324-200063","SI00005960","308-200062","323-200354","631-202725","SI00005412","330-200086","308-201061","SI00005950","SI00003670","333-200010","623-202681","623-202275","333-200020","SI00001245","623-202680","607-200019","606-200644","626-203287","623-202678","325-200283","619-200147","325-201624","626-204290","608-200140","623-201958","619-200145","628-200611","324-200214","301-200403","623-202216","623-202276","631-202554","316-200938","623-201393","624-201494","320-200014","623-202274","350-200768","619-200089","SI00001470","619-200148","628-200550","338-200603","626-206037","333-200009","613-200475","333-200021","619-200146","325-201776","607-200022","609-200397","SI00001452","319-201022","617-200190","334-200037","SI00002583","626-206900","627-200217","619-200132","616-201263","620-200286","312-200580","323-200771","605-203134","SI00001486","626-204912","616-201175","626-202544","626-205190","201-200131","319-200693","325-201309","608-200159","624-200223","636-200212","603-200248","SI00006564","627-200154","616-200071","602-200371","327-200161","338-200473","334-200114","327-200163","631-202792","611-200010","626-206090","617-200175","301-200465","619-200102","SI00001512","SI00001491","602-200603","612-200462","201-200137","SI00004873","SI00001503","319-200549","631-202850","611-200153","611-201772","327-200164","201-200168","616-201218","611-201829","635-200065","319-200091","607-200020","120-200007","325-200511","635-200011","325-201015","619-200063","611-200152","324-200059","119-200139","607-200015","626-203270","615-200505","636-200089","631-202620","SI00001436","631-203789","622-200385","623-201184","626-200301","SI00006211","323-200708","325-200744","627-200127","636-200200","607-200017","619-200023","612-200346","201-200057","324-200478","631-203328","626-202183","635-200066","607-200018","316-200937","635-200003","332-200348","318-200044","201-200054","611-201232","615-201840","201-200053","622-200420","605-201559","616-201279","605-203133","611-200151","631-202738","SI00006241","607-200016","616-201231","612-200345","633-200041","633-200042","616-202014","616-201668","626-201491","353-200114","202-200096","628-200628","613-200336","626-200684","201-200051","631-203329","611-200009","611-200013","631-201008","626-205016","611-200148","332-200217","202-200100","631-202587","611-200007","613-200333","202-200098","611-201475","615-200888","626-204967","611-201474","611-202016","626-204815","626-204812","616-201291","631-202833","613-200334","SI00007774","323-200552","308-200888","319-200708","626-202404","202-200102","202-200104","201-200090","616-201705","SI00006651","SI00006194","615-201831","308-200895","622-200313","613-200329","628-200536","611-200188","622-200295","615-200504","615-200471","631-202494","633-200044","626-204968","202-200110","631-203777","615-200483","615-200532","626-204298","626-204299","615-200529","611-201110","615-201001","611-201163","611-201153","622-200270","202-200191","615-200500","615-200934","611-200369","615-200473","615-200509","616-201089","611-201149","615-200524","631-202598","317-200399","615-200822","611-200290","323-200404","631-202643","202-200190","611-201157","616-201556","611-201160","611-201111","631-201368","324-200327","325-201017","332-200398","332-200399","332-200400","338-200014","613-200915","615-200510","615-200526","624-200844","626-202887","626-204599"],["GAS ANALYZER, TDL OXIGEN","PUMP, AXIAL-PISTON PUMP; A4VG280EP2DPR00","SHAFT, HEAD SHAFT: REFF.NO.1 DWG- NO.G27","C-PROFILE 1190, HP-SI-TB2-CL-CP1190L","HAMMER, COOLER (NEW MODEL): MAT'L.Hi-Cr","UPS, NM 20","STEEL, FIBRE; SS446 NEEDLES; SINAGAWA","CROSS, BAR KJ-210","RELAY, MOTOR MANAGEMENT; MODEL: 369","BELT, CONV.; 1000MMX4PLYXEP315X5X1.5MM","PLATE;WEAR;ASTM A-514;1500MM;3000MM;6MM","NOZZLE,SPRAY;MM-18;MNF;ENVIROCE INT","BUCKET, ELEV.; 309355","CABLE, POWER; NYY; 1X150MM; 0.6/1KV","TUBE PIVOT FLANGE VK-646","ROLLER,  RETURN STRAND ROLLER ASS'Y,","LINER, WEAR LINER EX-60 UHMWPE MATROX","PLATE;WEAR;ASTM A-514;1500MM;3000MM;16MM","LAMP, TYPE: LED FLOOD LIGHT; 480W","ELECTRODE, FIBULAX; TYPE: V3550-100","BEARING, ROLLING CONTACT; PN. 350","SHAFT, JOURNAL VK-638;","FIBULAX, ELECTRODE; V2050-100","GREASE,MP,BRG,N2,LITH,VIS95-160","BEARING, ROLLING CONTACT; PN. 450","PLATE, STEEL; 5MMX4FTX8FT; +/-5% TOL","CAPSULE, SALE TRANSPORT; B 0965","SOLENOID VALVE:2401127-0800;200VDC;6W","BEARING, ROLLING CONTACT; PN.150","WHEEL, F/TRIPPER; 25TON; HB.354","CHEMICAL, ANTI SLIME ZI-CHEM 2980","REPLACEMENT SET FOR TOOTH SEGMENT ,","SWITCH, FLOW RATE; UFM 0-50LPM","PLATE, WEAR RESIST; 12MMX1500MMX3000MM","BEARING, SNL530 TS","CHEMICAL, ANTI SLIME ZI-CHEM 2420","LAMP, FLOODLIGHT LED; 240W","BELT, CONV.; ENDLESS BAG 3390MM","HAMMER,COOLER:MANGAAN STEEL","BEARING, GE 160 ES","SHAFT: JOURNAL VK-640;","CABLE, CHAINFLEX; 12X1.5MM2; CF 5-15-12","TEMPERATUR SENSOR TR800 WEB EXZIEHL","BEARING, 22238 KMB/C3","BELT , CONV 1400MM X 3PLY X EP 315 X 6MM","CONICAL ROLL 800MM LG.","BEARING, SNL 530 T","ETAP, 1783-ETAP2F","CHEMICAL, LIQUID DESCALER 1202","OIL, HYDRAULIC, MIN VG68 ZINC FREE","CHEMICAL, ANTI SLIME ZI-CHEM 2173","LAMP, LED; HIGHWAY BAY; 90W; 5000K","RUBBER INSERT:FOR COUPLING N-EUPEX  GR 6","POINT LEVEL MEASUREMENT â€” VIBRATING","FIBULAX, STAY; TYPE: V3550-100","VALVE, SOLENOID DOUBLE; 4/2WAY; 3/8IN","FIBULAX, STAY; V2050-100","CHEMICAL, ANTI SLIME ZI-CHEM 2433","PIN: ITEM NO.4; F/CONVEYOR CHAIN","PLATE, STEEL; 10MMX4FTX8FT; +/-5% TOL","CHAIN, MASTER (LINK); F/ROLLER CHAIN 160","OIL, ENCLGEAR, MINERAL VG220","BELT, CONV.; ENDLESS BAG; 700MM/2PLY","FASTENER, BOLT; SOLID PLATE SIZE: 190","TRANSFORMER:T11","OIL, ENCLGEAR, MINERAL VG1000","CIRCUIT BREAKER, TYPE: GPS2BHAS; GE","CARBON BRUSH, MR7; 50MMX32MMX25MM","CHEMICAL, ANTIFOULANT ZI-CHEM 2950","SEAL KIT","FLEX., ELEMENT; N-EUPEX A 560","FILTER , INSERT;  A27/27","BUCKET, UPGRADE; F/PAN CONVEYOR","ACETYLENE, (7M3/6KG/BTL)","OIL, COMPRESSOR, MIN VG68","BREAKER, CIRCUIT; 3PH; 63 TO 100A","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","PUSH BUTTON, AND PILOT LIGHT; XB2-EA142","SWITCH, SELECTOR; 2-POSITION 4/13","CANAL, 150MMX75MMX6.5MMX6M","SWITCH,DRIFT:HEN 001;220VAC;10A","LEVEL LIMIT SWITCH, SOLIPHANT T TYPE : F","PLATE, WEAR RESIST; 4MMX1500MMX3000MM","SHEAR, TUBE; FLENDER 5179575/8020508","FILTER, OIL; SPARATOR; 3003065","CABLE, FLAT; 4COREX10MM2","V-BELT:SPA-1600MMX12.7X10MM;1ROW","CARBON BRUSH, RC73; 50MMX25MMX50MM","PACKING, FB 3071; FELT;10MMX1.6MX1M","BATTERY, RECHARGEABLE; HV7-12; 12V; 7AH","SHAFT, METAL BEARING; 50MM DIA","FAN, TOP THERM FILTER; SK 3241.100","FUSE:4115115;NH3;630A","SHAFT, METAL BEARING; 80MM DIA","PANEL BOX: H=600MM; W=400MM; D=250MM","PIPE, GALV; 1-1/4INX6M; MEDIUM-A","PROXIMITY SWITCH: XSA - V11801","FASTENER, BELT; 1-1/2IN; FLEXCO/JACKSONS","SHAFT, SCREW HEAD; C/W.PARALLEL KEY","CHEMICAL, OIL PENETRATING 1101","OIL, ENCLGEAR, MINERAL HL VG320","OIL, ENCLGEAR, MINERAL VG460","CARTRIDGE, LUBRICATION; M120SF01","HOSE, HIGH PRESSURE; 1/2IN; DN 12","CANAL; 200MMX75MMX6M","OIL, ENCLGEAR, MINERAL VG320","OIL, ENCLGEAR, MINERAL VG150","MEMBRANE, SPAREPART KIT; C113-825","LOCK, TERMINAL; DISCONNECTING; 4 TG","PIPE, STAINLESS STEEL; 1/2INX6M; SCH.40","CONNECTOR, GRLA-1/4-PK-6-B PN : 151174","BEARING, METAL;80H7MM;NI-HARD;HB.500-600","CANAL, 100MMX50MMX5MMX6M","SEAL, WIPER; F/ACTUATOR ROTO PACKER","VALVE,CHECK NON-RETURN TYPE:H-QS-6","CYLINDER, SERIES TRB; C/W. TIE ROD","MANIFOLD, FLOW CONTROLER , 711.0002.3000","PLATE, STEEL; 6MMX4FTX8FT; +/-5% TOL","CHEMICAL, ADITIF; SC-500","BELT, CONV.; 800MMX2PLYXEP315X5MMX1.5MM","CYLINDER, PNEUMATIC; 32-25 DOUBLE ACT","IDLER, IMPACT; F/BELT 1200MM FM","CHEMICALS CLEANER,FLASH POINT MIN 60Â° C","PIPE, STAINLESS STEEL; 3/4INX6M; SCH.40","IDLER, CARRING; JHR25D-140-990L","CLEANING PASTE; 80 SAKAPHEN; ORDER NO: 8","PLATE, STEEL; 1.5MMX4FTX8FT; +/-5% TOL","RELAY, LY2; 24VDC","BOLT, HEX HD; NUT; M10X40MM; GRD. 5","FILTER, AIR; P/N.10023440/3","CABLE, SHOES; 95MM2; HEAVY DUTY; M12","OIL, HYDRAULIC, MIN VG68","CABLE, POWER; NYYHY; 4 X 10MM2; 0.6-1KV","V-BELT, SPC 6300 LW","BEARING, NU 2319 ECM","RECTIFIER,BRAKE:BGE;08253854;0.37KW","WELD ROD;3.2MM;ESAB/NIKKO","BUCKET, F/BUCKET ELEV.; 354BE01","IDLER, CARRYING; F/BELT 600MM FM","CARBON BRUSH, SA35; 40MMX32MMX20MM","FILTER, AIR; CATRIDGE; 10016400","PLATE, STEEL; 3MMX4FTX8FT; +/-5% TOL","RAG, WIPPING: MAX.2 LAPIS","CONDUIT, FLEX.; 3/4IN; LT-12","BAR, ANGLE; 40MMX40MMX4MMX6M","IDLER, CARRYING; 1200MM; PT.612-M-017","L-QUICK CONNECTOR LCK-1/4-PK-4 POS. 1930","MAGNEHELIC, GAUGE; DWYER MOD: 2000-030","CYLINDER, SERIES TRB; BORE 50MM","PLATE, STEEL; 4MMX4FTX8FT; +/-5% TOL","INSULATOR,CERAMIC:DH-1-8-100;15/32IN","CYLINDER, PROFIL ISO 15552; SERIES PRA","POPPET DISC, F/PLENUM BF COAL MILL","CAP, COLLAR; 45MM; INSIDE; DIA; POS.70.","BAR, ANGLE; 75MMX75MMX8MMX6M","SPACER; FARVAL FT-2509-1","BOLT, DOWL; M31.5X109.65MM; ST-60","BAR, ANGLE; 65MMX65MMX6MMX6M","V-BELT, SPC 4000","TOOL, GUN GREASE; ALEMITE A-500","SEAL KIT","OXYGEN, (7-M3/BTL)","PIPE, STEEL SEAMLESS; 2IN X 6M; SCH.40","CABLE, POWER; NYY: 4X4MM2","WELD ROD;4MM;NIKKO;MG CON 53/NSG","PLATE, STEEL; 2MMX4FTX8FT; +/-5% TOL","SEAL KIT","CONDUIT, FLEX.; 1/2IN; LT-11","REGULATOR, PRESSURE: (ACETYLENE); 15-993","REGULATOR, PRESSURE: (OXYGEN); 125-992","GASKET, MX SERIES; 557509","SEAL KIT","BREAKER, CIRCUIT; 18 TO 26A","VALVE, FLOW CONTROL; 1-WAY GRLA-1/4-QS-6","THINNER, B; @1L","LED FLOOD LIGHT, 50W; 4500LM; 6500K","VALVE, GATE; 2IN; 150PSI","BREAKER, CIRCUIT; 2PH; 20A; 10KA","BAR, ANGLE; 50MMX50MMX5MMX6M","L-QUICK CONNECTOR LCK-1/4-PK-6 POS. 1930","PIPE, GALV; 1/2INX6M; MEDIUM-A","PIPE, GALV; 1-1/2INX6M; MEDIUM-A","TERMINAL,BATTERY,COAT:180A/590","BLOCK, TERMINAL; 1492 W3; 2.5MM2","PIPE, STEEL SEAMLESS; 1IN X 6M; SCH.40","DIAGPHRAM, S/P KIT; K4502/M2162; RCA 45T","CAT, EMCO 99/PICOLUX 903; NAVY BLUE","CABLE, POWER; NYYHY; 3X2.5MM2","PIPE, GALV; 3/4INX6M; MEDIUM-A","VALVE, GATE; 1-1/2IN; 150PSI","CAT, EMCO 52; LIGHT YELLOW","CONNECTOR, FLEX CONDUIT; 1/2IN","BOLT, STUD; M20X2.5MMX1000MM; GRD. 5","BREAKER, CIRCUIT; 12.5 TO 16A","CONNECTOR, FLEX CONDUIT; 3/4IN","CONNECTOR, MALE; METRIC: 22L X 3//4BSP","BREAKER, CIRCUIT; 2.5 TO 4A","BREAKER, CIRCUIT; 0.4 TO 0.63A","SEAL, OIL: 4.250\" X 5.256\" X 0.375\"","CABLE, CONTROL; 1-1/2MM2 1 PAIRS; 300VAC","VALVE, GATE; 1/2IN; 150PSI","BEARING;6015;C3;STEELC;DGBB","BUCKET, ELEV.; 535 61113; ABRASION","WIRING DUCT, GD-3060; 30MMX160MMX2M","SWITCH,PHOTO ELECTRIC:E3JMDS70M4-G","PLUG:380 TO 415V; 3PH; 32A","CAT, EMCO 58; GREY","CAT, EMCO 80; GREY","BAR, ANGLE; 30MMX30MMX3MMX6M","SEAL, OIL: 70MMX90MMX10 HMSA10V; SKF","V-BELT:B-70INX17X11MM;1ROW","WELD ROD;2.5MM;ESAB/NIKKO","BOLT, STUD GALVANIZED; M10X1.5X1000MM","WIRING DUCT, MID-2540; 25MMX140MMX2M","V-BELT, XPB 2360","VALVE, CHECK; 1-1/2IN; 125PSI","LAMP, LED; BULB 40W","FITTING, SWIVEL; FEMALE; M20711-04-04","V-BELT, SPA 1482 LW","BOLT, HEX HD; NUT; M10X30MM; GRD. 5","BOLT, HEX HD; NUT; M20X80MM; GRD. 5","TERMINAL,RAIL:DIN","TIP, CUTTING; 1-1-101; VICTOR USA","CONTACTOR, A9-30-22; 220VAC; 3PH","CAT, EMCO; WHITE","TIMER, DIGITAL; TM615H","BOLT, HEX HD; NUT; M16X70MM; GRD. 5","BOLT, HEX HD; NUT; M20X140MM; GRD. 5","PUSH BUTTON, XB5-AA31","PUSH BUTTON, XB5-AA42","BOLT, HEX HD; NUT; M20X70MM; GRD. 5","ELBOW, GALV.; 2IN; 90","BOLT, HEX HD; NUT; M20X160MM; GRD. 10","FERRULE, M03400 08; MANULI","FERRULE, M03400 04; MANULI","V-BELT, SPA 1800 LW","PAINT, BRUSH 1-1/2IN; ETERNA","BOLT, HEX HD; NUT; M8X30MM; GRD. 5","BOLT, STUD; M16X2MMX1000MM; GRD.5","UNION, GALV; 1-1/2IN","BOLT, HEX HD; NUT; M10X20MM; GRD. 5","BOLT, HEX HD; NUT; M12X30MM; GRD. 5","SEAL,OIL:100MM;125MM;13MM","UNION, GALV; 2IN","BOLT, HEX HD; NUT; M16X80MM; GRD. 5","CABLE, SHOES; 25MM2; RING","BOLT, HEX HD; CAP SCREW; M20X2.5X80MM","BOLT, U; 6IN; F/STEEL PIPE","ELBOW, GALV.; 1/2IN; 90","SEAL, OIL: 75MM; 95MM; 13MM","CABLE, TIES; 205MM X 3.5MM","PAINT, BRUSH; 1IN; ETERNA","BUSHING, GALV; 1INX3/4IN NPT","SEAL, OIL; 25MM X 47MM X 10MM","BUSHING, GALV; 2INX1.1/2IN NPT","TEE, GALV; 1-1/2INX1-1/2INX1-1/2IN","FUSE,LITTLE,ORDINARY:250V;0.125A;5MM","IDLER, RUBBER DISC RETURN; F/BELT 1000MM","IDLER, RUBBER DISC RETURN; F/BELT 1200MM","BAG CLOTH, 160MMX4500MM; F/547BF3","BAG CLOTH, 160MMX3375MM; F/547BF1","BAG CLOTH, 160MM DIAX8000MM; POLYESTER","COUPLING, FLEX.STEELFLEX T10; 1090T","TUBE PIVOT VK 648","BOLT, HEX HD; NUT; M12X45MM; GRD. 5","BOLT, HEX HD; NUT; M20X45MM; GRD. 5","REDUCER ; SL4004/MP1/330/S46C1 MB3","VALVE, LOCKING; 120VOLT","CARBON BRUSH, MR7; 40MM X 40MM X 20MM"],["SET","EA","SET","EA","EA","ST","KG","EA","UNT","M","LBR","EA","EA","M","EA","EA","SHT","LBR","UNT","EA","EA","EA","EA","KG","EA","LBR","EA","EA","EA","EA","PAI","SET","EA","LBR","SET","PAI","EA","EA","EA","EA","SET","M","EA","SET","M","EA","SET","EA","PAI","L","PAI","SET","EA","EA","EA","EA","EA","PAI","EA","LBR","EA","L","EA","BOX","EA","L","EA","EA","PAI","SET","SET","EA","EA","BTL","L","EA","TUB","EA","EA","BTG","EA","EA","LBR","EA","EA","M","EA","EA","LBR","EA","EA","EA","EA","EA","EA","EA","EA","SET","EA","CAN","L","L","EA","M","BTG","L","L","EA","EA","EA","EA","EA","BTG","SET","EA","EA","EA","LBR","KG","M","EA","EA","CAN","EA","EA","TUB","LBR","EA","EA","EA","EA","L","M","EA","EA","EA","KG","EA","EA","EA","EA","LBR","KG","ROL","BTG","EA","BTG","EA","EA","LBR","BOX","EA","SET","BTG","BTG","EA","EA","BTG","EA","EA","SET","BTL","EA","M","KG","LBR","SET","ROL","EA","EA","EA","SET","EA","EA","CAN","SET","EA","EA","BTG","BTG","EA","EA","CAN","EA","EA","EA","CAN","M","EA","EA","KG","EA","EA","EA","EA","EA","EA","EA","EA","M","EA","EA","EA","EA","EA","EA","KG","CAN","BTG","EA","EA","KG","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","CAN","SET","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","SET","EA","EA","EA","UNT","EA","EA"],[1,1,1,100,36,1,1.28,20,1,97,25,9,150,450,6,6,7,5,3,100,1,3,100,1260,2,37,4,4,2,2,11,1,2,2,2,4,2,1,6,2,1,110,1,2,20,6,1,2,11,836,10,5,10,1,20,1,20,5,100,4,7,400,1,2,3,205,2,14,3,2,1,2,7,22,209,1,172,5,6,5,1,1,1,7,2,25,86,6,4,16,4,2,6,3,2,12,4,200,1,48,209,200,4,73,3,200,200,5,86,5,10,2,8,20,10,4,6,3,70,6,4,5,2,5,4,5,9,30,1175,4,100,209,40,6,1,2,110,2,10,10,4,4,280,2,24,6,20,2,2,3,2,2,1,8,5,2,50,8,6,1,2,39,4,50,36,4,1,2,1,1,10,1,1,6,56,2,1,3,10,10,9,3,10,100,5,2,16,60,5,1,15,60,5,2,40,4,2,2,4,75,3,4,1,6,1,4,10,10,10,4,12,20,2,6,2,1,2,10,6,150,24,2,2,1,5,1,40,14,5,5,20,6,8,5,10,2,26,100,1,2,50,25,3,1,8,25,4,5,9,2,200,10,4,2,1,1,5,0,0,0,0,0,0,1,0,0,0,1,0],[349000000,315300000,310000000,257400000,214082229,207500000,204450617,176400000,170000000,135507642,121675000,121500000,114000000,98284508,71280000,70118182,60845556,59450000,59010000,57000000,55778000,54900000,47500000,44226000,42428000,37210900,35960000,34300000,25716000,23690000,23380804,21577469,19514285,19478000,18543917,18174900,18001521,17800000,17641209,17584000,16830000,16803112,16690000,16490000,16194000,14478000,14347100,13950000,13750000,13668600,12975000,12875000,12300000,12186000,11400000,10255153,10000000,9818750,9350000,8109600,8050000,7880000,7800000,7631812,7596685,7585000,7131400,7115500,7098750,6812500,6734092,6500000,5950000,5866000,5768400,5595000,5504000,5440000,5400000,5385000,5255000,5250000,5227000,5215000,5130000,5125000,4760100,4680000,4660000,4640000,4600000,4580000,4500000,4497000,4420000,4320000,4311960,4300000,4245000,4212000,4184389,4060000,4022960,4015000,3986308,3940000,3920000,3800000,3784000,3732798,3675000,3598000,3584000,3540000,3481000,3408000,3270000,3234000,3220000,3199200,3176000,3125000,3080000,2975305,2960000,2875000,2854800,2850000,2820000,2800000,2730000,2717000,2716000,2650252,2600000,2593704,2574000,2507967,2500000,2500000,2400000,2319600,2317000,2294000,2280000,2271000,2248000,2230000,2220000,2187000,2040000,2038000,2000000,1980000,1945000,1800000,1782121,1776000,1708789,1700000,1700000,1585000,1560000,1535498,1512000,1496000,1450000,1446000,1442021,1442015,1414940,1400000,1381547,1380000,1372000,1357486,1349300,1317000,1275000,1256000,1251000,1245000,1200000,1144200,990000,953659,927200,906000,895000,892282,884250,864000,855000,815446,768000,768000,727628,717154,704000,697495,684897,679174,654115,645000,625000,622500,589500,589500,530000,491805,469512,450356,443784,432000,400000,387395,372357,369860,332236,307500,305766,300000,299902,295000,294750,292500,291600,281120,231667,230701,230000,200657,153567,149500,139635,134499,127400,124000,111000,92637,85509,72250,72000,66900,63920,58094,54359,52250,48420,45686,38400,32000,30740,23600,19700,17826,500,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Material<\/th>\n      <th>Description<\/th>\n      <th>Base.Unit<\/th>\n      <th>Qty<\/th>\n      <th>Amount<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatCurrency(data, \"Rp\", 2, 3, \",\", \".\", true);\n  }"},{"className":"dt-right","targets":[4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
+<p><span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+</div>
+<div id="top-10-unit-kerja" class="section level2">
+<h2>Top 10 Unit Kerja</h2>
+<p>Berikut adalah total biaya pemakaian sparepart per Unit kerja September 2020.</p>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><div id="htmlwidget-4c4d790c7d963cf62893" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4c4d790c7d963cf62893">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"],["SECTION OF KC 1-2 MACHINE MAINTENANCE","SECTION OF RM 3-4 MACHINE MAINTENANCE","SECTION OF KC 3-4 ELINS MAINTENANCE","SECTION OF EPDC MAINTENANCE","SECTION OF FM 3-4 MACHINE MAINTENANCE","SECTION OF CRSHR&amp;CONV 3-4 ELINS MAINT","SECTION OF RKC 4 OPERATION","SECTION OF ELINS WORKSHOP","SECTION OF HEAVY EQUIP &amp; UTILITY MAINT","SECTION OF FM 1-2 MACHINE MAINTENANCE","SECTION OF CRSHR&amp;CONV 3-4 MACHINE MAINT","SECTION OF PACKER MACHINE MAINTENANCE","SECTION OF UTILITY OPERATION","SECTION OF CRSHR&amp;CONV 1-2 MACHINE MAINT","SECTION OF CRSHR&amp;CONV 1-2 ELINS MAINT","SECTION OF KC 1-2 ELINS MAINTENANCE","SECTION OF MACHINE WORKSHOP","UNIT OF QUALITY CONTROL","SECTION OF RM 3-4 ELINS MAINTENANCE","SECTION OF KC 3-4 MACHINE MAINTENANCE","SECTION OF PACKER ELINS MAINT","SECTION OF FM 1-2 ELINS MAINTENANCE","SECTION OF FM 3-4 ELINS MAINTENANCE","SECTION OF RM 1-2 ELINS MAINTENANCE","SECTION OF FM 1-2 OPERATION","SECTION OF PACKER OPERATION","SECTION OF CONSTRUCTION","SECTION OF GRESIK FM ELINS MAINTENANCE","UNIT OF RELIABILITY MAINTENANCE","SECTION OF RM 1-2 MACHINE MAINTENANCE","SECTION OF CRUSHER OPERATION","UNIT OF GENERAL AFFAIR &amp; ASSET","SECTION OF RKC 3 OPERATION","SECTION OF AF &amp; 3RD MATERIAL","SECTION OF RKC 1 OPERATION","SECTION OF GRESIK FM MACHINE MAINTENANCE"],[1004673863,543526841,541439653,392675894,346567872,209290500,204450617,197324621,154112723,130337816,130320578,99759562,75681370,65613030,63490691,44965603,40056920,35960000,33520500,32922321,27965058,21777937,20414256,17867756,17124000,7274000,5275408,4896000,3672000,3591700,3259023,2223000,1956000,1902000,1634000,746000]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>NAMA.SEKSI.PG<\/th>\n      <th>Amount<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatCurrency(data, \"Rp\", 2, 3, \",\", \".\", true);\n  }"},{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script> <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span></p>
+</div>
+<div id="list-material-per-unit-kerja" class="section level2">
+<h2>List Material per Unit Kerja</h2>
+<p>Berikut adalah daftar realisasi sparepart dari tiap unit kerja.</p>
+<pre><code>## `summarise()` regrouping output by &#39;CORRECTED.DESC.CC.PG&#39;, &#39;Order&#39;, &#39;Functional.loc.&#39;, &#39;DESKRIPSI.KEGIATAN&#39;, &#39;Material&#39;, &#39;Description&#39; (override with `.groups` argument)</code></pre>
+<div id="htmlwidget-6b1f5dffcc59efb67ecf" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6b1f5dffcc59efb67ecf">{"x":{"filter":"none","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200","201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220","221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240","241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300","301","302","303","304","305","306","307","308","309","310","311","312","313","314","315","316","317","318","319","320","321","322","323","324","325","326","327","328","329","330","331","332","333","334","335","336","337","338","339","340","341","342","343","344","345","346","347","348","349","350","351","352","353","354","355","356","357","358","359","360","361","362","363","364","365","366","367"],["SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMELIHARAAN MESIN FM 34","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER","SEKSI RKC 4","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","UNIT QUALITY CONTROL","SEKSI BENGKEL MESIN","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL 3-4","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMEL LISTRIK &amp; INSTR FM 1-2","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN UTILITAS","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMEL INSTRUMEN RKC 3-4","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI PEMELIHARAAN EPDC","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL INSTRUMEN RKC 3-4","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL INSTRUMEN RKC 3-4","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMEL INSTRUMEN RKC 3-4","SEKSI OPERASI FINISH MILL TUBAN 1-2","SEKSI OPERASI FINISH MILL TUBAN 1-2","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI OPERASI PACKER","SEKSI KONSTRUKSI","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN EPDC","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMEL INSTRUMEN RKC 3-4","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI OPERASI UTILITAS","SEKSI PEMELIHARAAN MESIN ROLLER MILL","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMEL. LISTRIK GRESIK","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN UTILITAS","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI FINISH MILL TUBAN 1-2","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI OPERASI FINISH MILL TUBAN 1-2","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMELIHARAAN UTILITAS","SEKSI OPERASI CRUSHER","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL 3-4","SEKSI PEMEL. LISTRIK GRESIK","SEKSI PEMELIHARAAN UTILITAS","SEKSI BENGKEL MESIN","SEKSI BENGKEL MESIN","SEKSI OPERASI PACKER","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI OPERASI FINISH MILL TUBAN 1-2","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI AFR &amp; MATERIAL KETIGA","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","UNIT INSPEKSI PEMELIHARAAN","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN UTILITAS","UNIT INSPEKSI PEMELIHARAAN","Unit of General Affair &amp; Asset","SEKSI OPERASI UTILITAS","SEKSI OPERASI UTILITAS","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMEL LISTRIK &amp; INSTR FM 1-2","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI RKC 1","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN EPDC","SEKSI RKC 3","SEKSI OPERASI PACKER","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN EPDC","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI KONSTRUKSI","Unit of General Affair &amp; Asset","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI OPERASI FINISH MILL TUBAN 1-2","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI PEMEL LISTRIK &amp; INSTR FM 1-2","SEKSI PEMELIHARAAN LISTRIK RKC 3-4","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI OPERASI UTILITAS","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN UTILITAS","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI BENGKEL MESIN","SEKSI RKC 3","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN LISTRIK RKC 1-2","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN GP GRESIK","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","UNIT INSPEKSI PEMELIHARAAN","SEKSI OPERASI CRUSHER","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN MESIN PACKER &amp; PELAB","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI AFR &amp; MATERIAL KETIGA","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMEL LISTRIK &amp; INSTR FM 3-4","SEKSI PEMELIHARAAN MESIN ROLLER MILL","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI RKC 1","SEKSI PEMELIHARAAN UTILITAS","SEKSI OPERASI CRUSHER","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI BENGKEL MESIN","SEKSI BENGKEL MESIN","SEKSI OPERASI CRUSHER","SEKSI BENGKEL MESIN","SEKSI OPERASI UTILITAS","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI OPERASI CRUSHER","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI BENGKEL LISTRIK &amp; INSTRUMENTASI","SEKSI PEMEL. LISTRIK GRESIK","SEKSI OPERASI PACKER","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL 3-4","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER","SEKSI KONSTRUKSI","UNIT INSPEKSI PEMELIHARAAN","SEKSI PEMELIHARAAN EPDC","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER &amp; CONV 3-4","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI RKC 3","SEKSI PEMELIHARAAN UTILITAS","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI PEMELIHARAAN MESIN GP GRESIK","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI PEMEL LISTRIK &amp; INSTR FM 1-2","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL","SEKSI OPERASI PACKER","SEKSI KONSTRUKSI","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI OPERASI PACKER","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN CRUSHER &amp; CONV 3-4","SEKSI OPERASI PACKER","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","UNIT INSPEKSI PEMELIHARAAN","UNIT INSPEKSI PEMELIHARAAN","SEKSI PEMELIHARAAN MESIN FM 34","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN UTILITAS","SEKSI BENGKEL MESIN","SEKSI PEMEL LIST &amp; INSTR PACKER &amp; PELABH","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMEL. LISTRIK GRESIK","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL 3-4","SEKSI OPERASI PACKER","SEKSI PEMEL INSTRUMEN RKC 1-2","SEKSI PEMEL LISTRIK &amp; INSTR FM 1-2","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMELIHARAAN UTILITAS","SEKSI PEMEL LISTRIK &amp; INSTR FM 1-2","SEKSI PEMEL LISTRIK &amp; INSTRUMEN CRUSHER","SEKSI PEMEL INSTRUMEN RKC 3-4","SEKSI PEMEL. LISTRIK GRESIK","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN EPDC","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN MESIN CRUSHER","SEKSI PEMELIHARAAN MESIN FM 12","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN MESIN ROLLER MILL 3-4","SEKSI PEMELIHARAAN UTILITAS","SIE PEMELIHARAAN MESIN KILN &amp; COAL MILL"],[13761412,13761386,13759499,13761386,13761385,13759871,11033891,13761386,13761416,13761388,11034729,16033946,13762983,13763236,11034726,13761293,11034725,11034725,11034729,13761295,11034726,11034728,13761295,13762026,13756103,13763042,13761295,13762951,13763260,12103530,13762160,13763239,13761382,13762975,13763638,13761385,13761298,11034844,11034845,11034726,13762277,13763283,13761385,13761382,13763432,11034726,13763079,13762337,13762315,15041627,13759481,13762841,11034729,13763243,11034728,13763260,13763434,12103350,15041626,12103840,13762984,13762812,13763707,13763224,13763264,15041623,13762866,13759499,15041613,13759158,15041563,15041605,15041611,15041612,13759499,13762340,13763224,13763224,13763224,13762111,11034831,13762841,13762024,13762024,13761518,13763390,26002102,16034612,11034837,16034613,11034836,16034687,16034691,16034692,16034695,13762812,16034613,13763079,13763226,13763743,13763636,16034687,16034691,16034692,16034696,16034613,13763077,15041606,13762951,16034569,13762311,15041606,13761558,13763609,11034838,13761516,13763078,16034613,13762111,13756753,13763078,13761558,13762179,16034612,13763078,16034688,13763468,16034612,13759497,13761516,13763543,16034568,16034627,13762340,16034612,13757091,15041638,13762309,13763384,13763438,16034687,16034691,16034692,16034696,13759499,11034836,13759497,13761518,13763595,16034688,16034689,13762024,13763014,13762967,13763078,16034612,13763434,16034689,16034694,16034695,13759497,13761516,16034612,13762024,13763056,13763078,16034687,16034691,16034692,16034695,16034696,13763078,13763613,16034643,13763386,13761375,13759599,13759373,13760775,16034569,13762816,13763434,13761520,13762337,16034627,13762024,13759497,13762967,16034455,13762802,13763014,13755712,13755712,15041614,13762023,13762803,13762203,13763078,13762808,13762816,13762023,21163334,16034694,16034695,13762861,13763584,13761516,11034725,13763078,26002101,13759871,13763224,13759537,13761427,16034542,16034459,26002102,13762061,16034642,11034892,13761425,21163334,13762815,13762816,13763014,13762024,13763224,13763237,13762314,13763014,13759497,15041614,13762980,13762203,13762167,13763434,13763224,13763224,16034631,13763430,13762136,13759497,13762815,18013475,13763438,13759371,16034542,13759499,13762222,13762815,13761516,13762861,13762308,13762167,13762167,13762025,18013475,16034628,13762023,16033943,13762815,13763078,13763237,16034455,13763709,13762222,13759497,26002102,13762180,13763055,26002101,13762816,16034643,11034725,13762809,13762191,13741810,13759373,13760775,16034643,13763042,16034617,13763224,16034643,13763604,13762167,13759497,13763080,13763543,16034569,13686465,13759497,13759364,13763059,13763396,13686465,13762215,21162893,13762167,13763224,13763224,13762985,13736616,16034542,13762816,13763055,13762025,13762985,13762816,13762982,13762985,13763237,13762314,13762985,13762191,13762191,13763222,16034459,13762215,13759367,13762816,16034459,13762985,13762816,13763058,13763383,16034459,13686465,13763221,13759497,13759364,13762023,13762023,13759486,13763058,13763709,13762816,13759371,13762222,13759497,13762333,18013475,13762951,13762204,13763059,16034569,13763237,13762314,15041614,15041613,13762816,13762816,13762314,13759871,13763264,13761375,11034758,11034758,11034758,13762071,13762071,13762071,13759497,11034726,13762313,13755712,13763223],["SG-2304-KL-473-AN01","SG-2303-KL-442-CC01","SG-2305-FM-547-RM01","SG-2303-KL-442-CC01","SG-2302-KL-441-CR01","SG-2307-CS-469-RR01","SG-2305-KL-444-KL01","SG-2303-KL-442-CC01","SG-2304-KL-473-RM01","SG-2305-RM-344-BC01","SG-2305-KL-444-EP01","SG-2304-RM-343-CT01","SG-2302-FM-560-BE02","SG-2302-RM-341-CP01","SG-2305-RM-354-SC03","SG-2305-RM-324-AF01","SG-2305-CR-234-CR01","SG-2305-CR-234-CR01","SG-2305-KL-444-EP01","SG-2305-RM-324-RR01","SG-2305-RM-354-SC03","SG-2305-RM-344-EP01","SG-2305-RM-324-RR01","SG-2307-CS-469-RR01","SG-2902-UK-4H9","SG-2305-FM-548-AS01","SG-2305-RM-324-RR01","SG-2303-CR-242-TR01","SG-2305-KL-464-CV01","SG-2303-KL-442-CC01","SG-2303-FM-543-CR01","SG-2303-CR-242-AC01","SG-2305-RM-334-WF01","SG-7902","SG-2303-PC-644-PL01","SG-2302-KL-441-CR01","SG-2305-RM-344-RM01","SG-2303-KL-442-AN01","SG-2303-KL-442-AN02","SG-2305-RM-354-SC03","SG-2302-PC-636-PM01","SG-2303-CR-232-CR01","SG-2302-KL-441-CR01","SG-2305-RM-334-WF01","SG-2303-PC-63A-BR01","SG-2305-RM-354-SC03","SG-2303-CR-242-TR01","SG-2304-FM-545-BM01","SG-2303-KL-442-KL01","SG-2303-KL-452-DB01","SG-2305-FM-568-BE01","SG-2304-KL-413-BS01","SG-2305-KL-444-EP01","SG-2304-KL-423-DV0C","SG-2305-RM-344-EP01","SG-2305-KL-464-CV01","SG-2303-CR-242-BC07","SG-2304-CR-233-FE02","SG-2304-CR-233-FE02","SG-2304-PC-63L-BW01","SG-2305-FM-514-MS01","SG-2303-RM-342-EP01","SG-2305-KL-474-CL01","SG-2303-CR-242-TR01","SG-2304-RM-343-RM01","SG-2303-RM-342-HS01","SG-2305-KL-414-BV01","SG-2305-FM-547-RM01","SG-2303-KL-442-CC01","SG-2302-KL-441-KL01","SG-2307-GN-519-RR01","SG-2305-RM-354-SC03","SG-2305-FM-514-GS01","SG-2302-CR-251-CR01","SG-2305-FM-547-RM01","SG-2303-RM-342-CP04","SG-2303-CR-242-TR01","SG-2303-CR-242-TR01","SG-2303-CR-242-TR01","SG-2305-RM-334-AF01","SG-2305-PC-63Q-PM01","SG-2304-KL-413-BS01","SG-2302-FM-541-BM01","SG-2302-FM-541-BM01","SG-2303-PC-746-CP01","SG-2305-FM-547-CA02","SG-7902-UK-561","SG-2302-PC-635-PM01","SG-2303-KL-776-PLC_ER13","SG-2305-PC-63R-SC01","SG-2303-RM-332-BC01","SG-2303-FM-543-CT01","SG-2304-KL-443-CT02","SG-2304-KL-443-CT01","SG-2302-KL-441-CT01","SG-2303-RM-342-EP01","SG-2305-PC-63R-SC01","SG-2303-CR-242-TR01","SG-2303-CR-242-BC05","SG-2305-FM-548-SX03","SG-2305-RM-344-BC01","SG-2303-FM-543-CT01","SG-2304-KL-443-CT02","SG-2304-KL-443-CT01","SG-2302-FM-541-CT01","SG-2305-PC-63R-SC01","SG-2304-KL-423-BE01","SG-2302-FM-541-SC01","SG-2303-CR-242-TR01","SG-2302-PC-632-PM01","SG-2302-KL-481-BL04","SG-2302-FM-541-SC01","SG-2302-FM-530-WF03","SG-2305-PC-618-BF03","SG-2303-KL-776-PLC_E11","SG-2303-KL-442-KL01","SG-2305-PC-63Q-PM01","SG-2305-PC-63R-SC01","SG-2305-RM-334-AF01","SG-2303-PC-63C-PM01","SG-2305-PC-63Q-PM01","SG-2302-FM-530-WF03","SG-2302-FM-541-CR01","SG-2302-PC-635-PM01","SG-2305-PC-63Q-PM01","SG-2305-FM-547-CT01","SG-2302-RM-331-MS01","SG-2302-PC-635-PM01","SG-2302-FM-541-BM01","SG-2303-KL-442-KL01","SG-2901-UK-620","SG-2305-PC-63Q-PM01","SG-2304-PC-626-AS06","SG-2303-RM-342-CP04","SG-2302-PC-635-PM01","SG-2302-KL-441-EP02","SG-2302-FM-541-CR01","SG-2305-WT-714-BG01","SG-2303-KL-442-FN05","SG-2303-KL-412-BL01","SG-2303-FM-543-CT01","SG-2304-KL-443-CT02","SG-2304-KL-443-CT01","SG-2302-FM-541-CT01","SG-2305-FM-547-RM01","SG-2303-RM-332-BC01","SG-2302-FM-541-BM01","SG-2303-PC-746-CP01","SG-2307-GN-713-TK05","SG-2305-FM-547-CT01","SG-2305-KL-444-CT01","SG-2302-FM-541-BM01","SG-2304-KL-483-TK01","SG-2302-FM-540-RM01","SG-2305-PC-63Q-PM01","SG-2302-PC-635-PM01","SG-2303-CR-242-BC07","SG-2305-KL-444-CT01","SG-2302-KL-441-TK01","SG-2302-KL-441-CT01","SG-2302-FM-541-BM01","SG-2303-KL-442-KL01","SG-2302-PC-635-PM01","SG-2302-FM-541-BM01","SG-2302-FM-541-BF04","SG-2305-PC-63Q-PM01","SG-2303-FM-543-CT01","SG-2304-KL-443-CT02","SG-2304-KL-443-CT01","SG-2302-KL-441-CT01","SG-2302-FM-541-CT01","SG-2305-PC-63Q-PM01","SG-2303-CR-232-FE02","SG-7902-UK-542","SG-2304-KL-453-BF03","SG-2301-FM-419-2S001A","SG-2302-FM-561-DV01","SG-2305-FM-547-RM01","SG-2302-FM-542-BM01","SG-2302-PC-632-PM01","SG-2302-KL-470-CP01","SG-2303-CR-242-BC07","SG-2302-FM-541-BM01","SG-2304-FM-545-BM01","SG-2304-PC-626-AS06","SG-2302-FM-541-BM01","SG-2302-FM-541-BM01","SG-2302-FM-540-RM01","SG-2302-FM-530-BC03","SG-2302-FM-540-GA01","SG-2304-KL-483-TK01","SG-2304-RM-353-CP03","SG-2304-RM-353-CP03","SG-2305-FM-548-GS02","SG-7902-UK-441","SG-2302-FM-541-GA02","SG-2305-EL-824-SS14","SG-2305-PC-63Q-PM01","SG-2303-FM-544-BC03","SG-2302-KL-470-CP01","SG-7902-UK-441","SG-2307-EL-805-BG01","SG-2302-KL-441-TK01","SG-2302-KL-441-CT01","SG-2305-PC-63P-PZ01","SG-2307-GN-519-ST02","SG-2303-KL-442-KL01","SG-2305-CR-234-CR01","SG-2305-PC-63Q-PM01","SG-2302-KL-441-KL01","SG-2307-CS-469-RR01","SG-2303-CR-242-TR01","SG-2302-RM-351-BF02","SG-2303-RM-352-BF03","SG-7902-UK-604","SG-2304-PC-63L-PM01","SG-7902-UK-561","SG-2303-CR-252-AC01","SG-2302-PC-622-BF0A","SG-2303-RM-332-WF01","SG-2303-KL-412-BS01","SG-2307-EL-805-BG01","SG-2304-FM-545-BC01","SG-2302-KL-470-CP01","SG-2304-KL-483-TK01","SG-2302-FM-541-BM01","SG-2303-CR-242-TR01","SG-7902-UK-663","SG-7902-UK-560","SG-2304-KL-483-TK01","SG-2302-FM-541-BM01","SG-2305-FM-548-GS02","SG-7902","SG-2305-EL-824-SS14","SG-2303-KL-452-BF06","SG-2303-CR-242-BC07","SG-2303-CR-242-TR01","SG-2303-CR-242-TR01","SG-2307-GN-711-TK01","SG-2302-KL-471-SC05","SG-2303-CR-252-HP01A","SG-2302-FM-541-BM01","SG-2304-FM-545-BC01","SG-2302-KL-441-PH01","SG-2303-KL-412-BL01","SG-2305-FM-547-RM01","SG-7902-UK-604","SG-2305-FM-547-RM01","SG-2305-EL-834-BG11","SG-2304-FM-545-BC01","SG-2303-KL-442-KL01","SG-2305-PC-63P-PZ01","SG-2302-FM-520-BE02","SG-2303-KL-452-BF06","SG-2303-KL-452-BF06","SG-7901-UK-619","SG-2302-KL-441-PH01","SG-2302-PC-622-AS01","SG-7902-UK-441","SG-2304-CR","SG-2304-FM-545-BC01","SG-2305-PC-63Q-PM01","SG-7902-UK-663","SG-2302-FM-530-BC03","SG-2302-KL-461-BC01","SG-2305-EL-834-BG11","SG-2302-FM-541-BM01","SG-7902-UK-561","SG-7902-UK-550","SG-2302-KL-441-KL01","SG-2302-KL-441-KL01","SG-2302-KL-470-CP01","SG-7902-UK-542","SG-2305-CR-234-CR01","SG-2303-FM-543-BC06","SG-2302-FM-541-CR01","SG-2305-FM-547-RM01","SG-2305-FM-547-RM01","SG-2302-FM-542-BM01","SG-7902-UK-542","SG-2305-FM-548-AS01","SG-2305-WT-714-WP02","SG-2303-CR-242-TR01","SG-7902-UK-542","SG-2305-PC-63P-SC02","SG-2303-KL-452-BF06","SG-2302-FM-541-BM01","SG-2302-FM-561-BE01","SG-2901-UK-620","SG-2302-PC-632-PM01","SG-2902-UK-603","SG-2302-FM-541-BM01","SG-2303-KL-442-KL01","SG-2304-KL-423-BE01","SG-2304-CR-243-BC08","SG-2902-UK-603","SG-2305-PC-63P-BC04","SG-7902-UK-441","SG-2303-KL-452-BF06","SG-2303-CR-242-TR01","SG-2303-CR-242-TR01","SG-2302-FM-542-BM01","SG-2305-FM-567-AS01","SG-7902-UK-604","SG-2302-KL-470-CP01","SG-2302-KL-441-KL01","SG-7901-UK-619","SG-2302-FM-542-BM01","SG-2302-KL-470-CP01","SG-2304-FM-523-BF03","SG-2302-FM-542-BM01","SG-7902-UK-663","SG-7902-UK-560","SG-2302-FM-542-BM01","SG-2302-FM-541-CR01","SG-2302-FM-541-CR01","SG-2302-KL-411-BF05","SG-2304-PC-63L-PM01","SG-2305-PC-63P-BC04","SG-2303-KL-472-RL01","SG-2302-KL-470-CP01","SG-2304-PC-63L-PM01","SG-2302-FM-542-BM01","SG-2302-KL-470-CP01","SG-2303-FM-543-BM01","SG-2305-CR-244-BC01","SG-2304-PC-63L-PM01","SG-2902-UK-603","SG-2302-KL-421-BF03","SG-2302-FM-541-BM01","SG-2303-KL-442-KL01","SG-7902-UK-441","SG-7902-UK-441","SG-2305-FM-548-SX03","SG-2303-FM-543-BM01","SG-2302-KL-461-BC01","SG-2302-KL-470-CP01","SG-2305-FM-547-RM01","SG-2305-EL-834-BG11","SG-2302-FM-541-BM01","SG-2305-RM-344-WS02","SG-2302-KL-441-PH01","SG-2303-CR-242-TR01","SG-2301-FM-424--2K004A","SG-2304-KL-423-BE01","SG-2302-PC-632-PM01","SG-7902-UK-663","SG-7902-UK-560","SG-2305-FM-548-GS02","SG-2303-KL-442-CC01","SG-2302-KL-470-CP01","SG-2302-KL-470-CP01","SG-7902-UK-560","SG-2307-CS-469-RR01","SG-2304-RM-343-RM01","SG-2301-FM-419-2S001A","SG-2305-FM-547-BF05","SG-2305-FM-547-BF05","SG-2305-FM-547-BF05","SG-2302-CR-231-FE02","SG-2302-CR-231-FE02","SG-2302-CR-231-FE02","SG-2302-FM-541-BM01","SG-2305-RM-354-SC03","SG-2304-RM-333-AC02","SG-2304-RM-353-CP03","SG-2302-KL-461-BC09"],["473AN1 Pasang Analyzer","442CC1 PERSIAPAN SPARE PART COOLER","OVH MILL#7-8; PREPARE READINESS PARTS","442CC1 PERSIAPAN SPARE PART COOLER","441CR1-2 PERSIAPAN SPARE HAMMER","UPS ER RUSAK","PRA OVH 2021 KONSUMABLE PART","442CC1 PERSIAPAN SPARE PART COOLER","GANTI MULTILIN 369","344BC01 BELT AUS","service EP COOLER","Ganti nozzle yang rusak","560BE2 PART RETROFIT BELT BUCKET","TARIK KABEL POWER 341CP1","ACTPLAN-354SC03:GANTI BEARING HEAD &amp; TUB","324AF01 GANTI RETURN ROLL","OVHTBN4-2021 234CR1 PERBAIKAN CRUSHER","OVHTBN4-2021 234CR1 PERBAIKAN CRUSHER","service EP COOLER","324RR01 GANTI BEARING REDUCER","ACTPLAN-354SC03:GANTI BEARING HEAD &amp; TUB","service EP rawmill","324RR01 GANTI BEARING REDUCER","PERBAIKAN LAMPU TOWER CCT","Ajuan Activity QC November 2020","OVH#8-FABRIKASI HOPER-CASING 548AS01-04","324RR01 GANTI BEARING REDUCER","242TR1, RODA AUS","PERSIAPANOVHTB42021-464CV01-CHAIN CONVEY","442CC1: Lampu padam","543CR1M05A: F240 - LEAK (BOCOR)","242AC1 LINNER AUS","334WF01 GANTI BELT WF","Perbaikan lampu sokley","INSP_BELT FEEDING 2 SOBEK","441CR1-2 PERSIAPAN SPARE HAMMER","344RM01 GANTI WEAR SLEVE PIPA AERASI","PATCHJOB TBN2 GANTI SELENOIDE 442AN1","PATCHJOB TBN2 GANTI SELENOIDE 442AN2","ACTPLAN-354SC03:GANTI BEARING HEAD &amp; TUB","636PM1M03: F510 - UNSAFE CONDITION","TEMPERATURE WENDING MOTOR HUNTING","441CR1-2 PERSIAPAN SPARE HAMMER","334WF01 GANTI BELT WF","63ABR1: BOLT SHAFT PUTUS D DALAM","ACTPLAN-354SC03:GANTI BEARING HEAD &amp; TUB","KOMUNIKASI RADIO TRIPPER","Service filter all","GANTI LAMPU PENERANGAN BURNER FLOOR","452DB1: F250 - LEVEL LOW (ISI KURANG)","PREPARE GANTI DRIVE PULLEY SET ASS'Y#568","Penggantian 413LE1","service EP COOLER","423DV D Tidak bisa gerak","service EP rawmill","PERSIAPANOVHTB42021-464CV01-CHAIN CONVEY","242BC7 LINNER, SKIRTBOARD AUS","bushing rantai pecah","BON OLI SIRKULASI AREA CRUSHER","63LBW1M01:F450 - TORN (SOBEK)","GANTI FASTENER","SERVICE EP RAW MILL","474CL01: F250 - LEVEL LOW (ISI KURANG)","UPGRADE PANEL TRIPPER 242TR1","SERVICE 343RM1","oli habis","424BVB seal kinetrol bocor","OVH MILL#7-8; PREPARE READINESS PARTS","PASANG REFILTER UNTUK 442CC1","RESTOCK GREASE WORKSHOP PMKC 1-2","stock regrease utk rutinitas regrease","354SC03: stok grease 1 drum","grease sistem 514 GS1","BON GREASE AREA CRUSHER","OVH MILL#7-8; PREPARE READINESS PARTS","GANTI OIL COMPRESSOR RAW MILL TB2 342CP4","UPGRADE PANEL TRIPPER 242TR1","UPGRADE PANEL TRIPPER 242TR1","UPGRADE PANEL TRIPPER 242TR1","Fabrikasi stagger Motor 334AF1","63QPM01:F460 - TRIPPED (TRIP)","Penggantian 413LE1","CONSUMABLE PART DES","CONSUMABLE PART DES","GANTI OIL COMPRESSOR PACKER TB2 746CP1","547CA02: RELOKASI PANEL","KONSUMBALE PART BULAN DESEMBER 2020","635PM1M03:F240 - LEAK (BOCOR)","PATCH JOB, GANTI BATRE UPS ER 13","63RSC01: F050 - BREAK (PATAH/PUTUS)","PATCH JOB, 332BC1 SERING TRIP","CWT_COOLING TOWER 543CT1","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 441CT1","SERVICE EP RAW MILL","63RSC01: F050 - BREAK (PATAH/PUTUS)","KOMUNIKASI RADIO TRIPPER","242BC5 UNSAVE CONDITION","PROXIMITY MOTION RUSAK","344BC01_BELT SOBEK 25M","CWT_COOLING TOWER 543CT1","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 541CT1","63RSC01: F050 - BREAK (PATAH/PUTUS)","423BE1R02-GANTI OLI REDUCER","TAMBAH OIL REDUCER 541SC1 OIL LOW LEVEL","242TR1, RODA AUS","BON BARANG PACKER TUBAN 1","481BL4M01: F100 - CORRODED (KOROSI).OK","TAMBAH OIL REDUCER 541SC1 OIL LOW LEVEL","530WF3: F250 - LEVEL LOW (ISI KURANG)","618BF03: F240 - LEAK (BOCOR)","PATCH JOB, GANTI TERMINAL PLC H2","CONSUMABLE PART DESEMBER 2020","MANIFOLD AUS","63RSC01: F050 - BREAK (PATAH/PUTUS)","Fabrikasi stagger Motor 334AF1","REPAIR AIR CYLINDER AREA PACKER","MANIFOLD AUS","530WF3: F250 - LEVEL LOW (ISI KURANG)","541CR1M08: flange inlet pompa rembes","635PM1M03:F240 - LEAK (BOCOR)","MANIFOLD AUS","CWT_COOLING TOWER 547CT01","331MS1:belt rusak disambungan","635PM1M03:F240 - LEAK (BOCOR)","541BM1 SERVICE MILL 1 BULAN DESEMBER","CONSUMABLE PART DESEMBER 2020","Kebutuhan material Listrik Gresik Desemb","63QPM01: F460 - TRIPPED (TRIP)","KANVAS BOCOR (JUMAT)","GANTI OIL COMPRESSOR RAW MILL TB2 342CP4","635PM1M03:F240 - LEAK (BOCOR)","perbaikan kabel grounding bottom ep cool","PERMINTAAN STOCK OIL M08","INSTALL KABEL POWER CRANE 714CA1","442FN5A GANTI VBELT","412BL10 SERVIS ( KEBUTUHAN SPARE PART )","CWT_COOLING TOWER 543CT1","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 541CT1","OVH MILL#7-8; PREPARE READINESS PARTS","PATCH JOB, 332BC1 SERING TRIP","541BM1 SERVICE MILL 1 BULAN DESEMBER","GANTI OIL COMPRESSOR PACKER TB2 746CP1","CWT_COOLING TOWER 713TK5","CWT_COOLING TOWER 547CT01","CWT_COOLING TOWER 444CT01","CONSUMABLE PART DES","Instalasi CO2 tuban3","SERVICE OK MILL BULAN DESEMBER","MANIFOLD AUS","635PM1M03:F240 - LEAK (BOCOR)","242BC7 LINNER, SKIRTBOARD AUS","CWT_COOLING TOWER 444CT01","CWT_COOLING TOWER 441TK1","CWT_COOLING TOWER 441CT1","541BM1 SERVICE MILL 1 BULAN DESEMBER","CONSUMABLE PART DESEMBER 2020","635PM1M03:F240 - LEAK (BOCOR)","CONSUMABLE PART DES","service bf 4","MANIFOLD AUS","CWT_COOLING TOWER 543CT1","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 443CT2","CWT_COOLING TOWER 441CT1","CWT_COOLING TOWER 541CT1","MANIFOLD AUS","232FE2M02: F240 - LEAK (BOCOR)","CONSUMABLE PART OPCR DES 2020","453FN3-GANTI V BELT FAN","Perbaikan Grease Pump air Separator","REPAIR ACT DIVERTER","OVH#7-FABRIKASI DAMRING MILL#7","542MM1 FABRIKASI CHECKHOLE SYMETRO","BON BARANG PACKER TUBAN 1","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","242BC7 LINNER, SKIRTBOARD AUS","service filter oil all mill 1","Service filter all","KANVAS BOCOR (JUMAT)","CONSUMABLE PART DES","541BM1 SERVICE MILL 1 BULAN DESEMBER","SERVICE OK MILL BULAN DESEMBER","rekondisi tutup skirt box","MOHON DIREPAIR ACTUATO 540GA1","Instalasi CO2 tuban3","PASANG LINE BYPASS COMP DUST KE CT TB3","PASANG LINE BYPASS COMP DUST KE CT TB3","REPAIR MANIFOLD BOCOR","CONSUMABLE DESEMBER 2020","541GA2 REKONDISI DRAT ROD ACTUATOR","SUB#14:TRAFO PANAS","MANIFOLD AUS","544BC3: lampu kelap kelip","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","CONSUMABLE DESEMBER 2020","Pasang Line power alat-alat Lab BB-QC","CWT_COOLING TOWER 441TK1","CWT_COOLING TOWER 441CT1","63PPZ01: F400 - SENSOR PROBLEM (SENSOR R","519ST2: F070 - BURN OUT (TERBAKAR)","CONSUMABLE PART DESEMBER 2020","OVHTBN4-2021 234CR1 PERBAIKAN CRUSHER","MANIFOLD AUS","CONSUMABLE PART RKC1 DESEMBER 2020","UPS ER RUSAK","UPGRADE PANEL TRIPPER 242TR1","351BF2: F010 - ACCU PROBLEM (PROBLEM AKI","352BF3: F140 - DISPLAY UNIT PROBLEM","Counsumable part bulan Desember 2020","BON BARANG PACKER 3 (DESEMBER 2020)","KONSUMBALE PART BULAN DESEMBER 2020","252AC1 SERVIS BUCKET","622BFA:F240 - LEAK (BOCOR)","PATCH JOB, SERVIS 332WF1","Fabrikasi &amp; pasang pintu Silo-2 Tuban-2","Pasang Line power alat-alat Lab BB-QC","545BC1:INSTALASI DRIFT SWITCH RUSAK","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","Instalasi CO2 tuban3","CONSUMABLE PART DES","UPGRADE PANEL TRIPPER 242TR1","KONSUMABLE PART SIE. ELINS RM12","CONSUMABLE BULAN DESEMBER 2020","Instalasi CO2 tuban3","541BM1 SERVICE MILL 1 BULAN DESEMBER","REPAIR MANIFOLD BOCOR","Perbaikan lampu sokley area CCT","SUB#14:TRAFO PANAS","452BF6: F490 - WORN OUT (AUS)","242BC7 LINNER, SKIRTBOARD AUS","UPGRADE PANEL TRIPPER 242TR1","UPGRADE PANEL TRIPPER 242TR1","REPAINTING 711TK10A-F","472SC5 GANTI SEAL LS ( CR 42419 )","STORAGE B3 TB 2 PERB &amp; PINDAH TOMBOL","541BM1 SERVICE MILL 1 BULAN DESEMBER","545BC1:INSTALASI DRIFT SWITCH RUSAK","Permintaan pasang instalasi air","412BL10 SERVIS ( KEBUTUHAN SPARE PART )","OVH#7-FABRIKASI CONE REJECT 1/3 BAG BAWA","Counsumable part bulan Desember 2020","OVH MILL#7-8; PREPARE READINESS PARTS","Battery charge off","545BC1:INSTALASI DRIFT SWITCH RUSAK","CONSUMABLE PART DESEMBER 2020","63PPZ01: F400 - SENSOR PROBLEM (SENSOR R","MINTA RECETACLE 1 PHASE 2 EA","452BF6: F490 - WORN OUT (AUS)","452BF6: F490 - WORN OUT (AUS)","BON OXCYGEN &amp; ACETYLENE","Permintaan pasang instalasi air","CAHMBER AS RUSAK (TUNGGU SCHEDULE)","CONSUMABLE DESEMBER 2020","CONSUMABLE PART OPCR NOV 2020","545BC1:INSTALASI DRIFT SWITCH RUSAK","MANIFOLD AUS","KONSUMABLE PART SIE. ELINS RM12","rekondisi tutup skirt box","461BC1 SERVICE REDUCER","Battery charge off","541BM1 SERVICE MILL 1 BULAN DESEMBER","KONSUMBALE PART BULAN DESEMBER 2020","CONSUMABLE DESEMBER","CONSUMABLE PMKC1-2 DESEMBER 2020","CONSUMABLE PART RKC1 DESEMBER 2020","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","CONSUMABLE PART OPCR DES 2020","OVHTBN4-2021 234CR1 PERBAIKAN CRUSHER","543BC6: F060 - BROKEN (PECAH)","541CR1M07: PASANG LINE GREASE","MAINTENANCE SERVICE MILL 7","OVH#7-FABRIKASI DAMRING MILL#7","542MM1 FABRIKASI CHECKHOLE SYMETRO","CONSUMABLE PART OPCR DES 2020","OVH#8-FABRIKASI HOPER-CASING 548AS01-04","MENAMBAL LINE 714WP01 YANG BOCOR","UPGRADE PANEL TRIPPER 242TR1","CONSUMABLE PART OPCR DES 2020","MOTOR KEMASUKAN OLI","452BF6: F490 - WORN OUT (AUS)","541BM1 SERVICE MILL 1 BULAN DESEMBER","Perb. LDR / Ganti Timer Lampu TopSilo P2","Kebutuhan material Listrik Gresik Desemb","BON BARANG PACKER TUBAN 1","CONSUMABLE PART PLIC 2020","541BM1 SERVICE MILL 1 BULAN DESEMBER","PASANG RECEIVER TANK BLASTER INLET TB 2","423BE1-GANTI SEAL REDUCER SISI HS","243BC8 Selal backstop bocor","CONSUMABLE PART PLIC 2020","TOP COVER SPLICING MENGELUPAS","Notif Bon Barang dan Solar Nop20","452BF6: F490 - WORN OUT (AUS)","UPGRADE PANEL TRIPPER 242TR1","UPGRADE PANEL TRIPPER 242TR1","542BM1 SERVICE MILL 2 BULAN DESEMBER","FABRIKASI CASING 567AS01-03 (5 SEGMEN)","Counsumable part bulan Desember 2020","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","CONSUMABLE PMKC1-2 DESEMBER 2020","BON OXCYGEN &amp; ACETYLENE","542BM1 SERVICE MILL 2 BULAN DESEMBER","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","VBELT PUTUS","542BM1 SERVICE MILL 2 BULAN DESEMBER","KONSUMABLE PART SIE. ELINS RM12","CONSUMABLE BULAN DESEMBER 2020","542BM1 SERVICE MILL 2 BULAN DESEMBER","541CR1M07: PASANG LINE GREASE","541CR1M07: PASANG LINE GREASE","411FN12 GANTI VBELT SPA 1800 X 2EA","BON BARANG PACKER 3 (DESEMBER 2020)","TOP COVER SPLICING MENGELUPAS","PASANG TANKI OIL TRAP RL COALMILL TB2","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","BON BARANG PACKER 3 (DESEMBER 2020)","542BM1 SERVICE MILL 2 BULAN DESEMBER","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","LENGKAPI BOLT MAIN HOLE TANGKI","244BC1 CHECK SEAL LS REDUCER MO2 REMBES","BON BARANG PACKER 3 (DESEMBER 2020)","CONSUMABLE PART PLIC 2020","421BF3: F010 - ACCU PROBLEM (PROBLEM AKI","541BM1 SERVICE MILL 1 BULAN DESEMBER","PASANG RECEIVER TANK BLASTER INLET TB 2","CONSUMABLE DESEMBER 2020","CONSUMABLE DESEMBER 2020","Chain SX putus","LENGKAPI BOLT MAIN HOLE TANGKI","461BC1 SERVICE REDUCER","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","OVH#7-FABRIKASI CONE REJECT 1/3 BAG BAWA","Battery charge off","541BM1 SERVICE MILL 1 BULAN DESEMBER","PASANG SUPPORT PIPA SUPPLY WS TANK TB 4","Permintaan pasang instalasi air","242TR1, RODA AUS","Perb pipa udara line kompresor inlet F","423BE1-GANTI SEAL REDUCER SISI HS","BON BARANG PACKER TUBAN 1","KONSUMABLE PART SIE. ELINS RM12","CONSUMABLE BULAN DESEMBER 2020","REPAIR MANIFOLD BOCOR","PASANG REFILTER UNTUK 442CC1","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","INSTALL LINE BYPASS COMPRESSOR ATOX TB1","CONSUMABLE BULAN DESEMBER 2020","UPS ER RUSAK","SERVICE 343RM1","Perbaikan Grease Pump air Separator","ganti bag cloth","ganti bag cloth","ganti bag cloth","231FE2, COUPLING AUS","231FE2, COUPLING AUS","231FE2, COUPLING AUS","541BM1 SERVICE MILL 1 BULAN DESEMBER","ACTPLAN-354SC03:GANTI BEARING HEAD &amp; TUB","333AC2_REDUCER KASAR","PASANG LINE BYPASS COMP DUST KE CT TB3","461BC9 GANTI RETURN ROLL"],["632-200221","331-200667","323-200646","317-200625","301-200636","350-200716","118-200079","316-201129","626-203385","324-200063","SI00005960","308-200062","323-200354","631-202725","SI00005412","330-200086","308-201061","SI00005950","333-200010","623-202681","623-202275","333-200020","623-202680","SI00003670","606-200644","607-200019","623-202678","325-200283","325-201624","SI00003670","626-204290","608-200140","623-201958","628-200611","324-200214","301-200403","623-202216","626-203287","626-203287","623-202276","631-202554","316-200938","623-201393","624-201494","320-200014","623-202274","350-200768","619-200089","628-200550","SI00001245","338-200603","626-206037","333-200009","613-200475","333-200021","325-201776","607-200022","609-200397","SI00001452","319-201022","617-200190","334-200037","SI00002583","626-206900","627-200217","SI00001470","616-201263","620-200286","312-200580","SI00001245","SI00001245","SI00001245","SI00001245","SI00001245","323-200771","SI00001486","626-204912","626-202544","626-205190","201-200131","319-200693","325-201309","608-200159","624-200223","636-200212","603-200248","627-200154","616-200071","602-200371","327-200161","338-200473","619-200145","619-200145","619-200145","619-200145","334-200114","327-200163","631-202792","611-200010","626-206090","617-200175","619-200147","619-200147","619-200147","619-200147","301-200465","SI00001512","SI00001491","602-200603","612-200462","201-200137","SI00004873","SI00001503","319-200549","631-202850","611-200153","611-201772","327-200164","201-200168","616-201218","611-201829","SI00001470","SI00001470","635-200065","319-200091","120-200007","325-200511","635-200011","325-201015","611-200152","119-200139","626-203270","615-200505","636-200089","SI00006564","631-202620","SI00001436","631-203789","622-200385","623-201184","619-200148","619-200148","619-200148","619-200148","323-200708","627-200127","325-200744","636-200200","619-200132","619-200132","619-200132","607-200017","612-200346","324-200478","631-203328","635-200066","607-200020","619-200147","619-200147","619-200147","619-200102","316-200937","635-200003","607-200019","332-200348","318-200044","619-200146","619-200146","619-200146","619-200146","619-200146","SI00006564","611-201232","615-201840","622-200420","605-201559","616-201279","605-203134","605-203134","607-200015","611-200151","201-200054","619-200063","619-200063","616-201175","607-200016","324-200059","324-200059","607-200018","616-201231","612-200345","633-200041","633-200042","616-202014","SI00006211","616-201668","626-201491","353-200114","628-200628","613-200336","SI00006241","626-200684","619-200148","619-200148","626-200301","626-200301","616-201175","607-200015","631-203329","611-200013","631-201008","626-205016","626-202183","626-202183","607-200020","619-200102","619-200102","611-200148","332-200217","201-200057","SI00006211","631-202587","611-200007","613-200333","611-201475","615-200888","626-204967","616-201175","616-201175","611-201474","616-201175","611-202016","631-202738","631-202738","202-200096","607-200018","626-204815","626-204812","202-200098","616-201291","631-202833","202-200100","611-200009","613-200334","SI00007774","201-200053","201-200053","323-200552","308-200888","201-200051","201-200051","319-200708","626-202404","202-200102","202-200104","605-203134","611-200009","605-203134","605-203134","201-200057","201-200057","SI00006651","SI00006194","201-200053","615-201831","308-200895","622-200313","619-200023","619-200023","619-200023","201-200054","613-200329","616-201175","201-200057","628-200536","611-200188","622-200295","605-203133","605-203133","201-200090","615-200504","615-200471","631-202494","633-200044","626-204968","202-200110","202-200096","631-203777","619-200023","605-203134","605-203134","605-203134","605-203134","616-201705","616-201705","202-200096","619-200023","619-200023","202-200100","626-204298","626-204299","615-200529","615-200483","201-200090","611-201110","605-203133","605-203133","202-200098","SI00006241","SI00006564","615-200532","619-200023","619-200023","615-201001","611-201163","611-201153","622-200270","615-200500","202-200191","SI00006211","SI00006211","615-200934","202-200096","611-200369","615-200473","615-200532","605-203133","605-203133","605-203133","605-203133","605-203133","605-203133","619-200023","615-200483","615-200509","616-201089","611-201149","615-200524","631-202598","317-200399","615-200822","611-200290","323-200404","605-203133","615-200532","605-203133","631-202643","202-200190","611-201157","616-201556","611-201160","611-201111","202-200191","631-201368","626-204599","626-202887","332-200398","332-200399","332-200400","338-200014","615-200510","615-200526","324-200327","613-200915","624-200844","607-200018","325-201017"],["GAS ANALYZER, TDL OXIGEN","PUMP, AXIAL-PISTON PUMP; A4VG280EP2DPR00","SHAFT, HEAD SHAFT: REFF.NO.1 DWG- NO.G27","C-PROFILE 1190, HP-SI-TB2-CL-CP1190L","HAMMER, COOLER (NEW MODEL): MAT'L.Hi-Cr","UPS, NM 20","STEEL, FIBRE; SS446 NEEDLES; SINAGAWA","CROSS, BAR KJ-210","RELAY, MOTOR MANAGEMENT; MODEL: 369","BELT, CONV.; 1000MMX4PLYXEP315X5X1.5MM","PLATE;WEAR;ASTM A-514;1500MM;3000MM;6MM","NOZZLE,SPRAY;MM-18;MNF;ENVIROCE INT","BUCKET, ELEV.; 309355","CABLE, POWER; NYY; 1X150MM; 0.6/1KV","TUBE PIVOT FLANGE VK-646","ROLLER,  RETURN STRAND ROLLER ASS'Y,","LINER, WEAR LINER EX-60 UHMWPE MATROX","PLATE;WEAR;ASTM A-514;1500MM;3000MM;16MM","ELECTRODE, FIBULAX; TYPE: V3550-100","BEARING, ROLLING CONTACT; PN. 350","SHAFT, JOURNAL VK-638;","FIBULAX, ELECTRODE; V2050-100","BEARING, ROLLING CONTACT; PN. 450","LAMP, TYPE: LED FLOOD LIGHT; 480W","CAPSULE, SALE TRANSPORT; B 0965","PLATE, STEEL; 5MMX4FTX8FT; +/-5% TOL","BEARING, ROLLING CONTACT; PN.150","WHEEL, F/TRIPPER; 25TON; HB.354","REPLACEMENT SET FOR TOOTH SEGMENT ,","LAMP, TYPE: LED FLOOD LIGHT; 480W","SWITCH, FLOW RATE; UFM 0-50LPM","PLATE, WEAR RESIST; 12MMX1500MMX3000MM","BEARING, SNL530 TS","LAMP, FLOODLIGHT LED; 240W","BELT, CONV.; ENDLESS BAG 3390MM","HAMMER,COOLER:MANGAAN STEEL","BEARING, GE 160 ES","SOLENOID VALVE:2401127-0800;200VDC;6W","SOLENOID VALVE:2401127-0800;200VDC;6W","SHAFT: JOURNAL VK-640;","CABLE, CHAINFLEX; 12X1.5MM2; CF 5-15-12","TEMPERATUR SENSOR TR800 WEB EXZIEHL","BEARING, 22238 KMB/C3","BELT , CONV 1400MM X 3PLY X EP 315 X 6MM","CONICAL ROLL 800MM LG.","BEARING, SNL 530 T","ETAP, 1783-ETAP2F","CHEMICAL, LIQUID DESCALER 1202","LAMP, LED; HIGHWAY BAY; 90W; 5000K","GREASE,MP,BRG,N2,LITH,VIS95-160","RUBBER INSERT:FOR COUPLING N-EUPEX  GR 6","POINT LEVEL MEASUREMENT â€” VIBRATING","FIBULAX, STAY; TYPE: V3550-100","VALVE, SOLENOID DOUBLE; 4/2WAY; 3/8IN","FIBULAX, STAY; V2050-100","PIN: ITEM NO.4; F/CONVEYOR CHAIN","PLATE, STEEL; 10MMX4FTX8FT; +/-5% TOL","CHAIN, MASTER (LINK); F/ROLLER CHAIN 160","OIL, ENCLGEAR, MINERAL VG220","BELT, CONV.; ENDLESS BAG; 700MM/2PLY","FASTENER, BOLT; SOLID PLATE SIZE: 190","TRANSFORMER:T11","OIL, ENCLGEAR, MINERAL VG1000","CIRCUIT BREAKER, TYPE: GPS2BHAS; GE","CARBON BRUSH, MR7; 50MMX32MMX25MM","OIL, HYDRAULIC, MIN VG68 ZINC FREE","SEAL KIT","FLEX., ELEMENT; N-EUPEX A 560","FILTER , INSERT;  A27/27","GREASE,MP,BRG,N2,LITH,VIS95-160","GREASE,MP,BRG,N2,LITH,VIS95-160","GREASE,MP,BRG,N2,LITH,VIS95-160","GREASE,MP,BRG,N2,LITH,VIS95-160","GREASE,MP,BRG,N2,LITH,VIS95-160","BUCKET, UPGRADE; F/PAN CONVEYOR","OIL, COMPRESSOR, MIN VG68","BREAKER, CIRCUIT; 3PH; 63 TO 100A","PUSH BUTTON, AND PILOT LIGHT; XB2-EA142","SWITCH, SELECTOR; 2-POSITION 4/13","CANAL, 150MMX75MMX6.5MMX6M","SWITCH,DRIFT:HEN 001;220VAC;10A","LEVEL LIMIT SWITCH, SOLIPHANT T TYPE : F","PLATE, WEAR RESIST; 4MMX1500MMX3000MM","SHEAR, TUBE; FLENDER 5179575/8020508","FILTER, OIL; SPARATOR; 3003065","CABLE, FLAT; 4COREX10MM2","CARBON BRUSH, RC73; 50MMX25MMX50MM","PACKING, FB 3071; FELT;10MMX1.6MX1M","BATTERY, RECHARGEABLE; HV7-12; 12V; 7AH","SHAFT, METAL BEARING; 50MM DIA","FAN, TOP THERM FILTER; SK 3241.100","CHEMICAL, ANTI SLIME ZI-CHEM 2420","CHEMICAL, ANTI SLIME ZI-CHEM 2420","CHEMICAL, ANTI SLIME ZI-CHEM 2420","CHEMICAL, ANTI SLIME ZI-CHEM 2420","FUSE:4115115;NH3;630A","SHAFT, METAL BEARING; 80MM DIA","PANEL BOX: H=600MM; W=400MM; D=250MM","PIPE, GALV; 1-1/4INX6M; MEDIUM-A","PROXIMITY SWITCH: XSA - V11801","FASTENER, BELT; 1-1/2IN; FLEXCO/JACKSONS","CHEMICAL, ANTI SLIME ZI-CHEM 2980","CHEMICAL, ANTI SLIME ZI-CHEM 2980","CHEMICAL, ANTI SLIME ZI-CHEM 2980","CHEMICAL, ANTI SLIME ZI-CHEM 2980","SHAFT, SCREW HEAD; C/W.PARALLEL KEY","OIL, ENCLGEAR, MINERAL HL VG320","OIL, ENCLGEAR, MINERAL VG460","CARTRIDGE, LUBRICATION; M120SF01","HOSE, HIGH PRESSURE; 1/2IN; DN 12","CANAL; 200MMX75MMX6M","OIL, ENCLGEAR, MINERAL VG320","OIL, ENCLGEAR, MINERAL VG150","MEMBRANE, SPAREPART KIT; C113-825","LOCK, TERMINAL; DISCONNECTING; 4 TG","PIPE, STAINLESS STEEL; 1/2INX6M; SCH.40","CONNECTOR, GRLA-1/4-PK-6-B PN : 151174","BEARING, METAL;80H7MM;NI-HARD;HB.500-600","CANAL, 100MMX50MMX5MMX6M","SEAL, WIPER; F/ACTUATOR ROTO PACKER","VALVE,CHECK NON-RETURN TYPE:H-QS-6","OIL, HYDRAULIC, MIN VG68 ZINC FREE","OIL, HYDRAULIC, MIN VG68 ZINC FREE","CYLINDER, SERIES TRB; C/W. TIE ROD","MANIFOLD, FLOW CONTROLER , 711.0002.3000","CHEMICAL, ADITIF; SC-500","BELT, CONV.; 800MMX2PLYXEP315X5MMX1.5MM","CYLINDER, PNEUMATIC; 32-25 DOUBLE ACT","IDLER, IMPACT; F/BELT 1200MM FM","PIPE, STAINLESS STEEL; 3/4INX6M; SCH.40","CLEANING PASTE; 80 SAKAPHEN; ORDER NO: 8","RELAY, LY2; 24VDC","BOLT, HEX HD; NUT; M10X40MM; GRD. 5","FILTER, AIR; P/N.10023440/3","V-BELT:SPA-1600MMX12.7X10MM;1ROW","CABLE, SHOES; 95MM2; HEAVY DUTY; M12","OIL, HYDRAULIC, MIN VG68","CABLE, POWER; NYYHY; 4 X 10MM2; 0.6-1KV","V-BELT, SPC 6300 LW","BEARING, NU 2319 ECM","CHEMICAL, ANTI SLIME ZI-CHEM 2173","CHEMICAL, ANTI SLIME ZI-CHEM 2173","CHEMICAL, ANTI SLIME ZI-CHEM 2173","CHEMICAL, ANTI SLIME ZI-CHEM 2173","BUCKET, F/BUCKET ELEV.; 354BE01","CARBON BRUSH, SA35; 40MMX32MMX20MM","IDLER, CARRYING; F/BELT 600MM FM","FILTER, AIR; CATRIDGE; 10016400","CHEMICAL, ANTIFOULANT ZI-CHEM 2950","CHEMICAL, ANTIFOULANT ZI-CHEM 2950","CHEMICAL, ANTIFOULANT ZI-CHEM 2950","PLATE, STEEL; 3MMX4FTX8FT; +/-5% TOL","CONDUIT, FLEX.; 3/4IN; LT-12","IDLER, CARRYING; 1200MM; PT.612-M-017","L-QUICK CONNECTOR LCK-1/4-PK-4 POS. 1930","CYLINDER, SERIES TRB; BORE 50MM","PLATE, STEEL; 6MMX4FTX8FT; +/-5% TOL","CHEMICAL, ANTI SLIME ZI-CHEM 2980","CHEMICAL, ANTI SLIME ZI-CHEM 2980","CHEMICAL, ANTI SLIME ZI-CHEM 2980","CHEMICAL, OIL PENETRATING 1101","INSULATOR,CERAMIC:DH-1-8-100;15/32IN","CYLINDER, PROFIL ISO 15552; SERIES PRA","PLATE, STEEL; 5MMX4FTX8FT; +/-5% TOL","POPPET DISC, F/PLENUM BF COAL MILL","CAP, COLLAR; 45MM; INSIDE; DIA; POS.70.","CHEMICAL, ANTI SLIME ZI-CHEM 2433","CHEMICAL, ANTI SLIME ZI-CHEM 2433","CHEMICAL, ANTI SLIME ZI-CHEM 2433","CHEMICAL, ANTI SLIME ZI-CHEM 2433","CHEMICAL, ANTI SLIME ZI-CHEM 2433","V-BELT:SPA-1600MMX12.7X10MM;1ROW","SPACER; FARVAL FT-2509-1","BOLT, DOWL; M31.5X109.65MM; ST-60","V-BELT, SPC 4000","TOOL, GUN GREASE; ALEMITE A-500","SEAL KIT","ACETYLENE, (7M3/6KG/BTL)","ACETYLENE, (7M3/6KG/BTL)","PLATE, STEEL; 1.5MMX4FTX8FT; +/-5% TOL","PIPE, STEEL SEAMLESS; 2IN X 6M; SCH.40","BAR, ANGLE; 75MMX75MMX8MMX6M","CHEMICALS CLEANER,FLASH POINT MIN 60Â° C","CHEMICALS CLEANER,FLASH POINT MIN 60Â° C","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","PLATE, STEEL; 2MMX4FTX8FT; +/-5% TOL","IDLER, CARRING; JHR25D-140-990L","IDLER, CARRING; JHR25D-140-990L","PLATE, STEEL; 4MMX4FTX8FT; +/-5% TOL","SEAL KIT","CONDUIT, FLEX.; 1/2IN; LT-11","REGULATOR, PRESSURE: (ACETYLENE); 15-993","REGULATOR, PRESSURE: (OXYGEN); 125-992","GASKET, MX SERIES; 557509","WELD ROD;3.2MM;ESAB/NIKKO","SEAL KIT","BREAKER, CIRCUIT; 18 TO 26A","VALVE, FLOW CONTROL; 1-WAY GRLA-1/4-QS-6","LED FLOOD LIGHT, 50W; 4500LM; 6500K","VALVE, GATE; 2IN; 150PSI","WELD ROD;4MM;NIKKO;MG CON 53/NSG","BREAKER, CIRCUIT; 2PH; 20A; 10KA","CHEMICAL, ANTI SLIME ZI-CHEM 2173","CHEMICAL, ANTI SLIME ZI-CHEM 2173","RECTIFIER,BRAKE:BGE;08253854;0.37KW","RECTIFIER,BRAKE:BGE;08253854;0.37KW","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","PLATE, STEEL; 1.5MMX4FTX8FT; +/-5% TOL","L-QUICK CONNECTOR LCK-1/4-PK-6 POS. 1930","PIPE, GALV; 1-1/2INX6M; MEDIUM-A","TERMINAL,BATTERY,COAT:180A/590","BLOCK, TERMINAL; 1492 W3; 2.5MM2","MAGNEHELIC, GAUGE; DWYER MOD: 2000-030","MAGNEHELIC, GAUGE; DWYER MOD: 2000-030","PLATE, STEEL; 6MMX4FTX8FT; +/-5% TOL","CHEMICAL, OIL PENETRATING 1101","CHEMICAL, OIL PENETRATING 1101","PIPE, STEEL SEAMLESS; 1IN X 6M; SCH.40","DIAGPHRAM, S/P KIT; K4502/M2162; RCA 45T","BAR, ANGLE; 40MMX40MMX4MMX6M","WELD ROD;3.2MM;ESAB/NIKKO","CABLE, POWER; NYYHY; 3X2.5MM2","PIPE, GALV; 3/4INX6M; MEDIUM-A","VALVE, GATE; 1-1/2IN; 150PSI","CONNECTOR, FLEX CONDUIT; 1/2IN","BOLT, STUD; M20X2.5MMX1000MM; GRD. 5","BREAKER, CIRCUIT; 12.5 TO 16A","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","CONNECTOR, FLEX CONDUIT; 3/4IN","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","CONNECTOR, MALE; METRIC: 22L X 3//4BSP","CABLE, POWER; NYY: 4X4MM2","CABLE, POWER; NYY: 4X4MM2","THINNER, B; @1L","PLATE, STEEL; 4MMX4FTX8FT; +/-5% TOL","BREAKER, CIRCUIT; 2.5 TO 4A","BREAKER, CIRCUIT; 0.4 TO 0.63A","CAT, EMCO 52; LIGHT YELLOW","SEAL, OIL: 4.250\" X 5.256\" X 0.375\"","CABLE, CONTROL; 1-1/2MM2 1 PAIRS; 300VAC","CAT, EMCO 99/PICOLUX 903; NAVY BLUE","PIPE, GALV; 1/2INX6M; MEDIUM-A","VALVE, GATE; 1/2IN; 150PSI","BEARING;6015;C3;STEELC;DGBB","BAR, ANGLE; 65MMX65MMX6MMX6M","BAR, ANGLE; 65MMX65MMX6MMX6M","BUCKET, ELEV.; 535 61113; ABRASION","WIRING DUCT, GD-3060; 30MMX160MMX2M","BAR, ANGLE; 50MMX50MMX5MMX6M","BAR, ANGLE; 50MMX50MMX5MMX6M","SWITCH,PHOTO ELECTRIC:E3JMDS70M4-G","PLUG:380 TO 415V; 3PH; 32A","CAT, EMCO 58; GREY","CAT, EMCO 80; GREY","ACETYLENE, (7M3/6KG/BTL)","PIPE, GALV; 1/2INX6M; MEDIUM-A","ACETYLENE, (7M3/6KG/BTL)","ACETYLENE, (7M3/6KG/BTL)","BAR, ANGLE; 40MMX40MMX4MMX6M","BAR, ANGLE; 40MMX40MMX4MMX6M","V-BELT:B-70INX17X11MM;1ROW","WELD ROD;2.5MM;ESAB/NIKKO","BAR, ANGLE; 65MMX65MMX6MMX6M","BOLT, STUD GALVANIZED; M10X1.5X1000MM","WIRING DUCT, MID-2540; 25MMX140MMX2M","V-BELT, XPB 2360","RAG, WIPPING: MAX.2 LAPIS","RAG, WIPPING: MAX.2 LAPIS","RAG, WIPPING: MAX.2 LAPIS","BAR, ANGLE; 75MMX75MMX8MMX6M","VALVE, CHECK; 1-1/2IN; 125PSI","ADHESIVE, SILICON; RTV-732/ S601/ SSCT-N","BAR, ANGLE; 40MMX40MMX4MMX6M","LAMP, LED; BULB 40W","FITTING, SWIVEL; FEMALE; M20711-04-04","V-BELT, SPA 1482 LW","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","BAR, ANGLE; 30MMX30MMX3MMX6M","BOLT, HEX HD; NUT; M10X30MM; GRD. 5","BOLT, HEX HD; NUT; M20X80MM; GRD. 5","TERMINAL,RAIL:DIN","TIP, CUTTING; 1-1-101; VICTOR USA","CONTACTOR, A9-30-22; 220VAC; 3PH","CAT, EMCO; WHITE","THINNER, B; @1L","TIMER, DIGITAL; TM615H","RAG, WIPPING: MAX.2 LAPIS","ACETYLENE, (7M3/6KG/BTL)","ACETYLENE, (7M3/6KG/BTL)","ACETYLENE, (7M3/6KG/BTL)","ACETYLENE, (7M3/6KG/BTL)","SEAL, OIL: 70MMX90MMX10 HMSA10V; SKF","SEAL, OIL: 70MMX90MMX10 HMSA10V; SKF","THINNER, B; @1L","RAG, WIPPING: MAX.2 LAPIS","RAG, WIPPING: MAX.2 LAPIS","CAT, EMCO 99/PICOLUX 903; NAVY BLUE","PUSH BUTTON, XB5-AA31","PUSH BUTTON, XB5-AA42","BOLT, HEX HD; NUT; M20X70MM; GRD. 5","BOLT, HEX HD; NUT; M16X70MM; GRD. 5","BAR, ANGLE; 30MMX30MMX3MMX6M","ELBOW, GALV.; 2IN; 90","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","CAT, EMCO 52; LIGHT YELLOW","WELD ROD;4MM;NIKKO;MG CON 53/NSG","V-BELT:SPA-1600MMX12.7X10MM;1ROW","BOLT, HEX HD; NUT; M20X140MM; GRD. 5","RAG, WIPPING: MAX.2 LAPIS","RAG, WIPPING: MAX.2 LAPIS","BOLT, HEX HD; NUT; M20X160MM; GRD. 10","FERRULE, M03400 08; MANULI","FERRULE, M03400 04; MANULI","V-BELT, SPA 1800 LW","BOLT, HEX HD; NUT; M8X30MM; GRD. 5","PAINT, BRUSH 1-1/2IN; ETERNA","WELD ROD;3.2MM;ESAB/NIKKO","WELD ROD;3.2MM;ESAB/NIKKO","BOLT, STUD; M16X2MMX1000MM; GRD.5","THINNER, B; @1L","UNION, GALV; 1-1/2IN","BOLT, HEX HD; NUT; M10X20MM; GRD. 5","BOLT, HEX HD; NUT; M20X140MM; GRD. 5","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","OXYGEN, (7-M3/BTL)","RAG, WIPPING: MAX.2 LAPIS","BOLT, HEX HD; NUT; M16X70MM; GRD. 5","BOLT, HEX HD; NUT; M12X30MM; GRD. 5","SEAL,OIL:100MM;125MM;13MM","UNION, GALV; 2IN","BOLT, HEX HD; NUT; M16X80MM; GRD. 5","CABLE, SHOES; 25MM2; RING","BOLT, HEX HD; CAP SCREW; M20X2.5X80MM","BOLT, U; 6IN; F/STEEL PIPE","ELBOW, GALV.; 1/2IN; 90","SEAL, OIL: 75MM; 95MM; 13MM","OXYGEN, (7-M3/BTL)","BOLT, HEX HD; NUT; M20X140MM; GRD. 5","OXYGEN, (7-M3/BTL)","CABLE, TIES; 205MM X 3.5MM","PAINT, BRUSH; 1IN; ETERNA","BUSHING, GALV; 1INX3/4IN NPT","SEAL, OIL; 25MM X 47MM X 10MM","BUSHING, GALV; 2INX1.1/2IN NPT","TEE, GALV; 1-1/2INX1-1/2INX1-1/2IN","PAINT, BRUSH 1-1/2IN; ETERNA","FUSE,LITTLE,ORDINARY:250V;0.125A;5MM","CARBON BRUSH, MR7; 40MM X 40MM X 20MM","VALVE, LOCKING; 120VOLT","BAG CLOTH, 160MMX4500MM; F/547BF3","BAG CLOTH, 160MMX3375MM; F/547BF1","BAG CLOTH, 160MM DIAX8000MM; POLYESTER","COUPLING, FLEX.STEELFLEX T10; 1090T","BOLT, HEX HD; NUT; M12X45MM; GRD. 5","BOLT, HEX HD; NUT; M20X45MM; GRD. 5","IDLER, RUBBER DISC RETURN; F/BELT 1000MM","TUBE PIVOT VK 648","REDUCER ; SL4004/MP1/330/S46C1 MB3","PLATE, STEEL; 4MMX4FTX8FT; +/-5% TOL","IDLER, RUBBER DISC RETURN; F/BELT 1200MM"],["SET","EA","SET","EA","EA","ST","KG","EA","UNT","M","LBR","EA","EA","M","EA","EA","SHT","LBR","EA","EA","EA","EA","EA","UNT","EA","LBR","EA","EA","SET","UNT","EA","LBR","SET","EA","EA","EA","EA","EA","EA","SET","M","EA","SET","M","EA","SET","EA","PAI","SET","KG","EA","EA","EA","EA","EA","EA","LBR","EA","L","EA","BOX","EA","L","EA","EA","L","SET","SET","EA","KG","KG","KG","KG","KG","EA","L","EA","EA","EA","BTG","EA","EA","LBR","EA","EA","M","EA","LBR","EA","EA","EA","PAI","PAI","PAI","PAI","EA","EA","EA","EA","EA","SET","PAI","PAI","PAI","PAI","EA","L","L","EA","M","BTG","L","L","EA","EA","EA","EA","EA","BTG","SET","EA","L","L","EA","EA","KG","M","EA","EA","EA","TUB","EA","EA","EA","EA","EA","L","M","EA","EA","PAI","PAI","PAI","PAI","EA","EA","EA","EA","PAI","PAI","PAI","LBR","ROL","EA","BTG","EA","LBR","PAI","PAI","PAI","CAN","BOX","EA","LBR","SET","BTG","PAI","PAI","PAI","PAI","PAI","EA","EA","EA","EA","EA","SET","BTL","BTL","LBR","EA","BTG","CAN","CAN","TUB","LBR","EA","EA","LBR","SET","ROL","EA","EA","EA","KG","SET","EA","EA","SET","EA","KG","EA","PAI","PAI","EA","EA","TUB","LBR","BTG","EA","CAN","EA","EA","EA","LBR","CAN","CAN","EA","EA","BTG","KG","M","EA","EA","EA","EA","EA","TUB","TUB","EA","TUB","EA","M","M","CAN","LBR","EA","EA","KG","EA","M","CAN","EA","EA","EA","BTG","BTG","EA","EA","BTG","BTG","EA","EA","KG","CAN","BTL","EA","BTL","BTL","BTG","BTG","EA","KG","BTG","EA","EA","EA","KG","KG","KG","BTG","EA","TUB","BTG","EA","EA","EA","BTL","BTL","BTG","EA","EA","EA","EA","EA","CAN","CAN","SET","KG","BTL","BTL","BTL","BTL","EA","EA","CAN","KG","KG","CAN","EA","EA","EA","EA","BTG","EA","BTL","BTL","KG","KG","EA","EA","KG","KG","EA","EA","EA","EA","EA","EA","KG","KG","EA","CAN","EA","EA","EA","BTL","BTL","BTL","BTL","BTL","BTL","KG","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","BTL","EA","BTL","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","EA","SET","EA","EA","EA","EA","UNT","LBR","EA"],[1,1,1,100,36,1,1.28,20,1,97,25,9,150,450,6,6,7,5,100,1,3,100,2,2,4,35,2,2,1,1,2,2,2,2,1,6,2,2,2,1,110,1,2,20,6,1,2,11,5,360,10,1,20,1,20,100,4,7,400,1,2,3,205,2,14,418,2,1,2,180,180,180,180,180,7,209,1,5,6,5,1,1,1,7,2,25,6,4,16,4,2,1,1,1,1,6,3,2,12,4,200,2,2,2,2,1,209,200,4,73,3,200,200,5,86,5,10,2,8,20,10,209,209,4,6,70,6,4,5,5,5,30,1175,4,50,100,209,40,6,1,2,2,2,2,2,10,10,4,1,1,1,4,2,6,20,2,2,1,1,1,24,2,2,2,1,8,1,1,1,1,1,33,2,50,6,1,2,6,6,5,4,4,1,1,48,4,2,2,2,1,2,1,1,10,60,1,1,6,2,1,32,3,1,1,1,1,40,4,10,3,10,100,1,1,1,12,12,5,2,10,40,60,5,1,60,5,2,24,24,40,24,4,25,25,30,1,2,2,12,4,75,12,5,3,4,3,3,1,6,5,5,1,4,10,10,2,4,2,2,5,5,12,20,2,2,6,2,50,50,50,1,1,12,4,2,10,6,8,8,6,150,24,2,2,1,5,12,1,20,1,1,1,1,2,2,10,30,30,4,5,5,20,30,4,6,5,4,3,4,3,8,20,20,8,5,10,2,100,24,5,5,1,4,2,50,4,2,2,2,2,2,2,10,10,25,3,1,8,25,4,5,9,2,1,2,1,200,10,4,2,1,1,2,5,0,1,0,0,0,0,0,0,0,1,0,0,0],[349000000,315300000,310000000,257400000,214082229,207500000,204450617,176400000,170000000,135507642,121675000,121500000,114000000,98284508,71280000,70118182,60845556,59450000,57000000,55778000,54900000,47500000,42428000,39340000,35960000,35199500,25716000,23690000,21577469,19670000,19514285,19478000,18543917,18001521,17800000,17641209,17584000,17150000,17150000,16830000,16803112,16690000,16490000,16194000,14478000,14347100,13950000,13750000,12875000,12636000,12300000,12186000,11400000,10255153,10000000,9350000,8109600,8050000,7880000,7800000,7631812,7596685,7585000,7131400,7115500,6834300,6812500,6734092,6500000,6318000,6318000,6318000,6318000,6318000,5950000,5768400,5595000,5440000,5400000,5385000,5255000,5250000,5227000,5215000,5130000,5125000,4680000,4660000,4640000,4600000,4580000,4543725,4543725,4543725,4543725,4500000,4497000,4420000,4320000,4311960,4300000,4251055,4251055,4251055,4251055,4245000,4184389,4060000,4022960,4015000,3986308,3940000,3920000,3800000,3784000,3732798,3675000,3598000,3584000,3540000,3481000,3417150,3417150,3408000,3270000,3220000,3199200,3176000,3125000,2975305,2875000,2850000,2820000,2800000,2767500,2730000,2717000,2716000,2650252,2600000,2595000,2595000,2595000,2595000,2507967,2500000,2500000,2400000,2366250,2366250,2366250,2319600,2294000,2271000,2248000,2220000,2156000,2125528,2125528,2125528,2106000,2040000,2038000,2011400,2000000,1980000,1963750,1963750,1963750,1963750,1963750,1826550,1800000,1782121,1708789,1700000,1700000,1590000,1590000,1586000,1560000,1556000,1540000,1540000,1536000,1496000,1480000,1480000,1458000,1450000,1446000,1442021,1442015,1414940,1404000,1400000,1381547,1380000,1357486,1349300,1344000,1317000,1297500,1297500,1296852,1296852,1280000,1268800,1256000,1245000,1200000,1144200,1115000,1115000,1078000,1053000,1053000,990000,953659,950000,936000,906000,895000,892282,864000,855000,815446,768000,768000,768000,768000,768000,767749,767749,735000,729000,727628,717154,707400,704000,697495,695400,695000,684897,679174,666000,666000,654115,645000,637500,637500,625000,622500,589500,589500,566000,556000,530000,530000,475000,475000,469512,450356,444000,443784,432000,400000,392500,392500,392500,389000,387395,384000,380000,372357,369860,332236,320000,320000,318000,307500,305766,300000,299902,295000,294750,294000,292500,276000,265000,265000,265000,265000,245903,245902,245000,235500,235500,231800,231667,230701,230000,218700,212000,200657,200000,180000,176850,168000,166050,160640,157000,157000,153567,149500,139635,134499,124000,117600,117000,117000,111000,98000,92637,85509,80320,80000,80000,80000,80000,80000,80000,78500,72900,72250,72000,66900,63920,58094,54359,52250,48420,45686,45000,40160,40000,38400,32000,30740,23600,19700,17826,9800,500,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Unit_Kerja<\/th>\n      <th>Order<\/th>\n      <th>FUNLOC<\/th>\n      <th>Order_desc<\/th>\n      <th>Material<\/th>\n      <th>Description<\/th>\n      <th>Unit<\/th>\n      <th>Qty<\/th>\n      <th>Amount<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Blfrtip","buttons":["copy","csv","excel","pdf","print"],"lengthMenu":[[10,25,50,-1],["10","25","50","All"]],"columnDefs":[{"className":"dt-right","targets":[2,8,9]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p><span class="math inline">\(~\)</span></p>
+</div>
+<div id="summary-ajuan-target-dan-realisasi" class="section level2">
+<h2>SUMMARY AJUAN, TARGET, DAN REALISASI</h2>
+<p>Berikut adalah summary dari daftar ajuan, Target dan realisasi material.</p>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><img src="des_20_files/figure-html/summary_perUK-1.png" width="672" /></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

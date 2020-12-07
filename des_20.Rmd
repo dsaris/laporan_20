@@ -1,0 +1,186 @@
+---
+title: "Desember 2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+library(kableExtra)
+library(knitr)
+library(tidyverse)
+library(stringr)
+library(DT)
+library(lubridate)
+library(scales)
+library(tidyr)
+library(plotly)
+library(ggplot2)
+```
+```{r include=FALSE}
+
+kumulatif_okt_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRTg75PePS-rwn6bt7OpCbvn4CBNbhjiYZHgYmKjlh1OhVBdmCOx9VugmsAufPP2AbPPDbm_8NkEh7c/pub?gid=1958899369&single=true&output=csv"
+)
+kumulatif_okt_20$average.target <- as.numeric(gsub("[Rp.]","", kumulatif_okt_20$average.target))
+kumulatif_okt_20$kumulatif.target <- as.numeric(gsub("[Rp.]","", kumulatif_okt_20$kumulatif.target))
+kumulatif_okt_20$realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_okt_20$realisasi))
+kumulatif_okt_20$kumulatif.realisasi <- as.numeric(gsub("[Rp.]","", kumulatif_okt_20$kumulatif.realisasi))
+
+#mengubah format tanggal
+kumulatif_okt_20 <- kumulatif_okt_20 %>% mutate(tanggal2 =as.Date(tanggal, format= '%d/%m/%y'))
+
+str(kumulatif_okt_20)
+
+#Mengubah nilai NA jadi ""
+kumulatif_okt_20 %>% replace(., is.na(.), "")
+                
+
+```
+
+## Target dan Realisasi Kumulatif
+Berikut adalah  summary antara target dan realisasi pemakaian sparepart secara kumulatif.
+
+
+```{r graf_line, echo=FALSE, warning=FALSE}
+kumulatif_okt_20 <- select(kumulatif_okt_20, tanggal2, kumulatif.target, kumulatif.realisasi)
+
+
+akumulatif_okt_20 <- gather(kumulatif_okt_20, "KATEGORI", "TOTAL", kumulatif.target:kumulatif.realisasi)
+
+
+ggplot(akumulatif_okt_20, aes(x=tanggal2, y=TOTAL, color=KATEGORI)) +
+  geom_line(aes(y = TOTAL), size = 1, alpha=0.8)+
+  geom_point(aes(y = TOTAL), size = 2, alpha=1)+
+  scale_color_manual(values=c("#ff6550", "#178565"))+
+  xlab("tanggal") +
+  ylab("Rupiah") +
+  ggtitle("Realisasi Sparepart Kumulatif Nopember 2020") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 16000000000), labels = scales::comma)
+  
+  #scale_x_discrete(name = "Tanggal", limits = c(1:31))
+#theme(legend.position = c(0.25, 0.9),
+#legend.direction = "horizontal")
+```
+
+
+$~$
+$~$  
+    
+    
+ 
+## Top 10 Material Used  
+Berikut adalah daftar biaya material per sparepart.
+
+```{r top_10_spare, echo=FALSE}
+library(dplyr)
+rl_okt_20 <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRTg75PePS-rwn6bt7OpCbvn4CBNbhjiYZHgYmKjlh1OhVBdmCOx9VugmsAufPP2AbPPDbm_8NkEh7c/pub?gid=0&single=true&output=csv")
+
+rl_okt_20$Quantity <- as.numeric(rl_okt_20$Quantity)
+rl_okt_20$Amount.in.LC <- as.numeric(rl_okt_20$Amount.in.LC)
+
+
+top_spare <- rl_okt_20 %>%
+  group_by(Material,Description, Base.Unit) %>%
+  summarize(
+    Qty = sum(Quantity, na.rm = TRUE),
+    Amount = sum(Amount.in.LC, na.rm = TRUE)
+  ) %>%
+  arrange(desc(Amount)) %>%
+  top_n(10)
+datatable(top_spare) %>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
+```
+  
+  
+$~$
+$~$
+  
+
+    
+## Top 10 Unit Kerja  
+Berikut adalah total biaya pemakaian sparepart per Unit kerja September 2020.
+
+```{r top_10_uk, echo=FALSE}
+
+
+top_uk <- rl_okt_20 %>%
+  group_by(NAMA.SEKSI.PG) %>%
+  summarize(
+    Amount = sum(Amount.in.LC, na.rm = TRUE)
+  ) %>%
+  arrange(desc(Amount)) 
+ 
+datatable(top_uk) %>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
+```
+$~$
+$~$
+
+## List Material per Unit Kerja  
+Berikut adalah daftar realisasi sparepart dari tiap unit kerja.
+```{r list_mat_perUK, echo=FALSE}
+
+
+list_mat_uk <- rl_okt_20 %>%
+  group_by(CORRECTED.DESC.CC.PG, Order, Functional.loc., DESKRIPSI.KEGIATAN,  Material,Description, Base.Unit) %>%
+  summarize(
+    Qty = sum(Quantity, na.rm = TRUE),
+    Amount = sum(Amount.in.LC, na.rm = TRUE)
+  ) %>%
+  arrange(desc(Amount)) %>%
+  rename(Unit_Kerja = CORRECTED.DESC.CC.PG,
+         FUNLOC = Functional.loc.,
+         Order_desc = DESKRIPSI.KEGIATAN,
+         Unit = Base.Unit)
+ 
+datatable(list_mat_uk, extensions = 'Buttons',
+            options = list(dom = 'Blfrtip',
+                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                           lengthMenu = list(c(10,25,50,-1),
+                                             c(10,25,50,"All")))) #%>% formatCurrency('Amount', currency = "Rp", interval = 3, mark = ",", digits = 2, dec.mark = getOption("OutDec"), before = TRUE)
+```
+
+$~$
+
+## SUMMARY AJUAN, TARGET, DAN REALISASI 
+Berikut adalah summary dari daftar ajuan, Target dan realisasi material.
+
+
+```{r summary_perUK, echo=FALSE}
+
+db_okt <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTcTaeSCDuWHNTkLlAgzxOWpug3FX4P7wg-qGSBMM_c5rLGNUbTZEGRmp4-oIr8kjsHk1zahCxQBmzL/pub?gid=0&single=true&output=csv")
+
+db_okt$TOTAL.BIAYA <- as.numeric(as.character(db_okt$TOTAL.BIAYA))
+db_okt$TARGET.AJUAN <- as.numeric(as.character(db_okt$TARGET.AJUAN))
+db_okt$Realisasi <- as.numeric(as.character(db_okt$Realisasi))
+
+db_okt <- db_okt %>% mutate(Ajuan = TOTAL.BIAYA,
+                            Target = TARGET.AJUAN,
+                            REALISASI = Realisasi)
+
+db_10_20<-gather(db_okt, kategori, jumlah, Ajuan:REALISASI)
+
+bar_db_10_20 <- db_10_20 %>% group_by(kategori) %>%
+                summarize( tot = sum(jumlah, na.rm = TRUE)/1000000000) 
+
+p<-ggplot(bar_db_10_20, aes(x=kategori, y=tot, fill=kategori)) +
+  geom_bar(stat="identity")+theme_minimal() +
+  
+  xlab("Kategori") +
+  ylab("Rupiah") +
+  ggtitle("SUMMARY BIAYA MATERIAL NOPEMBER") +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 16), labels = scales::comma) +
+  geom_text(aes(label=round(tot,3)), position=position_dodge(width=0.9), vjust=1.6) +
+  scale_x_discrete(limits=c("Ajuan", "Target", "REALISASI"))+
+  scale_fill_manual(values=c("#4285f4d6","#a51204db","#47494eb8"))
+  
+    
+
+p
+
+
+```
