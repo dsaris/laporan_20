@@ -60,7 +60,7 @@ ggplot(akumulatif_okt_20, aes(x=tanggal2, y=TOTAL, color=KATEGORI)) +
   scale_color_manual(values=c("#ff6550", "#178565"))+
   xlab("tanggal") +
   ylab("Rupiah") +
-  ggtitle("Realisasi Sparepart Kumulatif Nopember 2020") +
+  ggtitle("Realisasi Sparepart Kumulatif Desember 2020") +
   scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 16000000000), labels = scales::comma)
   
   #scale_x_discrete(name = "Tanggal", limits = c(1:31))
@@ -172,7 +172,7 @@ p<-ggplot(bar_db_10_20, aes(x=kategori, y=tot, fill=kategori)) +
   
   xlab("Kategori") +
   ylab("Rupiah") +
-  ggtitle("SUMMARY BIAYA MATERIAL NOPEMBER") +
+  ggtitle("SUMMARY BIAYA MATERIAL DESEMBER") +
   scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 16), labels = scales::comma) +
   geom_text(aes(label=round(tot,3)), position=position_dodge(width=0.9), vjust=1.6) +
   scale_x_discrete(limits=c("Ajuan", "Target", "REALISASI"))+
