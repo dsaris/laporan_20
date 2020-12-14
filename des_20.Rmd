@@ -56,7 +56,7 @@ akumulatif_okt_20 <- gather(kumulatif_okt_20, "KATEGORI", "TOTAL", kumulatif.tar
 
 
 
-fig <- plot_ly(kumulatif_okt_20, x = ~tanggal2, y = ~kumulatif.target, name = 'target',type = 'scatter', mode = 'lines')
+fig <- plot_ly(kumulatif_okt_20, x = ~tanggal2, y = ~kumulatif.target, name = 'target',type = 'scatter', mode = 'lines', offline = TRUE)
 fig <- fig %>% add_trace(y = ~kumulatif.realisasi, name = 'realisasi', line = list(color = '#292e28', width = 3))
 fig
 
