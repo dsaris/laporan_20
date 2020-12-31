@@ -97,7 +97,7 @@ $~$
 
     
 ## Top 10 Unit Kerja  
-Berikut adalah total biaya pemakaian sparepart per Unit kerja September 2020.
+Berikut adalah total biaya pemakaian sparepart per Unit kerja Desember 2020.
 
 ```{r top_10_uk, echo=FALSE}
 
@@ -167,7 +167,7 @@ p<-ggplot(bar_db_10_20, aes(x=kategori, y=tot, fill=kategori)) +
   xlab("Kategori") +
   ylab("Rupiah") +
   ggtitle("SUMMARY BIAYA MATERIAL DESEMBER") +
-  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 16), labels = scales::comma) +
+  scale_y_continuous(name = "Milyar Rupiah", limits = c(0, 20), labels = scales::comma) +
   geom_text(aes(label=round(tot,3)), position=position_dodge(width=0.9), vjust=1.6) +
   scale_x_discrete(limits=c("Ajuan", "Target", "REALISASI"))+
   scale_fill_manual(values=c("#4285f4d6","#a51204db","#47494eb8"))
